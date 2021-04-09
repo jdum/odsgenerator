@@ -35,6 +35,7 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Operating System :: OS Independent",
         "Topic :: Text Processing",
     ],
@@ -42,6 +43,6 @@ setup(
     license="MIT",
     python_requires=">=3.6",
     packages=["odsgenerator"],
-    install_requires=["odfdo>=3.3"],
+    install_requires=["odfdo>=3.3", "pyyaml"],
     entry_points={"console_scripts": ["odsgenerator=odsgenerator.command_line:main"]},
 )
