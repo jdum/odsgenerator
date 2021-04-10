@@ -12,6 +12,7 @@ FILE1 = "test_json.json"
 FILE2 = "test_minimal.json"
 FILE3 = "test_yaml.yml"
 FILE4 = "test_use_case.json"
+FILE5 = "test_styles.json"
 
 
 class TestMain(TestCase):
@@ -556,6 +557,30 @@ class TestFile4(TestCase):
         t = tables[1]
         rows = t.get_rows()
         self.assertEqual(len(rows), 17)
+
+    class TestFile5(TestCase):
+        def setUp(self):
+            self.output = FILE5 + ".ods"
+            if os.path.isfile(self.output):
+                os.remove(self.output)
+            og.odsgen(FILE5, self.output)
+            self.document = Document(self.output)
+            self.body = self.document.body
+
+        def tearDown(self):
+            try:
+                os.remove(self.output)
+            except IOError:
+                pass
+
+        def test_tables(self):
+            tables = self.body.get_tables()
+            self.assertEqual(len(tables), 1)
+
+        def test_t0_name(self):
+            tables = self.body.get_tables()
+            t = tables[0]
+            self.assertEqual(t.name, "demo styles")
 
 
 if __name__ == "__main__":

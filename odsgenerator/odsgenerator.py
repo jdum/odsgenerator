@@ -68,6 +68,44 @@ Styles:
       called by their name for cells or rows.
     - To add a custom style, use the "styles" category of the document dict.
       A style is a dict with 2 keys, "definition" and "name".
+
+List of provided styles:
+grid_06pt means the cell is surrounded by a black border of 0.6 points,
+gray means the cell has a gray background.
+The file tests/result_test_styles.ods shows all the provided styles.
+
+Row styles:
+    - default_table_row
+    - table_row_1cm
+Cell styles:
+    - bold
+    - bold_center
+    - left
+    - right
+    - center
+    - cell_decimal1
+    - cell_decimal2
+    - cell_decimal3
+    - cell_decimal4
+    - cell_decimal6
+    - grid_06pt
+    - bold_left_bg_gray_grid_06pt
+    - bold_right_bg_gray_grid_06pt
+    - bold_center_bg_gray_grid_06pt
+    - bold_left_grid_06pt
+    - bold_right_grid_06pt
+    - bold_center_grid_06pt
+    - left_grid_06pt
+    - right_grid_06pt
+    - center_grid_06pt
+    - integer_grid_06pt
+    - integer_no_zero_grid_06pt
+    - center_integer_no_zero_grid_06pt
+    - decimal1_grid_06pt
+    - decimal2_grid_06pt
+    - decimal3_grid_06pt
+    - decimal4_grid_06pt
+    - decimal6_grid_06pt
 """
 
 import sys
@@ -80,7 +118,7 @@ except ModuleNotFoundError:
 import odfdo
 from odfdo import Document, Table, Row, Cell, Element
 
-__version__ = "1.4.0"
+__version__ = "1.4.2"
 
 DEFAULT_STYLES = [
     {
@@ -121,7 +159,7 @@ DEFAULT_STYLES = [
             style:parent-style-name="Default">
             <style:text-properties fo:font-weight="bold"
             style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-            <style:table-cell-properties style:text-align-source="vfix"/>
+            <style:table-cell-properties style:text-align-source="fix"/>
             <style:paragraph-properties fo:text-align="center"/>
             </style:style>
         """,
@@ -300,27 +338,100 @@ DEFAULT_STYLES = [
         "definition": """
              <style:style style:family="table-cell"
              style:parent-style-name="Default">
-             <style:table-cell-properties fo:font-weight="bold"
-             style:font-weight-asian="bold" style:font-weight-complex="bold"
+             <style:table-cell-properties
              fo:background-color="#dddddd" fo:border="0.06pt solid #000000"
              style:text-align-source="fix"/>
              <style:paragraph-properties fo:text-align="start"
              fo:margin-left="1.2mm"/>
+             <style:text-properties fo:font-weight="bold"
+             style:font-weight-asian="bold" style:font-weight-complex="bold"/>
              </style:style>
          """,
+    },
+    {
+        "name": "bold_right_bg_gray_grid_06pt",
+        "definition": """
+              <style:style style:family="table-cell"
+              style:parent-style-name="Default">
+              <style:table-cell-properties
+              fo:background-color="#dddddd" fo:border="0.06pt solid #000000"
+              style:text-align-source="fix"/>
+              <style:paragraph-properties fo:text-align="end"
+              fo:margin-right="1.2mm"/>
+              <style:text-properties fo:font-weight="bold"
+              style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+              </style:style>
+          """,
     },
     {
         "name": "bold_center_bg_gray_grid_06pt",
         "definition": """
              <style:style style:family="table-cell"
              style:parent-style-name="Default">
-             <style:table-cell-properties fo:font-weight="bold"
-             style:font-weight-asian="bold" style:font-weight-complex="bold"
+             <style:table-cell-properties
              fo:background-color="#dddddd" fo:border="0.06pt solid #000000"
              style:text-align-source="fix"/>
              <style:paragraph-properties fo:text-align="center"/>
+             <style:text-properties fo:font-weight="bold"
+             style:font-weight-asian="bold" style:font-weight-complex="bold"/>
              </style:style>
          """,
+    },
+    {
+        "name": "bold_left_grid_06pt",
+        "definition": """
+             <style:style style:family="table-cell"
+             style:parent-style-name="Default">
+             <style:table-cell-properties
+             fo:border="0.06pt solid #000000"
+             style:text-align-source="fix"/>
+             <style:paragraph-properties fo:text-align="start"
+             fo:margin-left="1.2mm"/>
+             <style:text-properties fo:font-weight="bold"
+             style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+             </style:style>
+         """,
+    },
+    {
+        "name": "bold_right_grid_06pt",
+        "definition": """
+              <style:style style:family="table-cell"
+              style:parent-style-name="Default">
+              <style:table-cell-properties
+              fo:border="0.06pt solid #000000"
+              style:text-align-source="fix"/>
+              <style:paragraph-properties fo:text-align="end"
+              fo:margin-right="1.2mm"/>
+              <style:text-properties fo:font-weight="bold"
+              style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+              </style:style>
+          """,
+    },
+    {
+        "name": "bold_center_grid_06pt",
+        "definition": """
+             <style:style style:family="table-cell"
+             style:parent-style-name="Default">
+             <style:table-cell-properties
+             fo:border="0.06pt solid #000000"
+             style:text-align-source="fix"/>
+             <style:paragraph-properties fo:text-align="center"/>
+             <style:text-properties fo:font-weight="bold"
+             style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+             </style:style>
+         """,
+    },
+    {
+        "name": "left_grid_06pt",
+        "definition": """
+            <style:style style:family="table-cell"
+            style:parent-style-name="Default">
+            <style:table-cell-properties style:text-align-source="fix"
+            fo:border="0.06pt solid #000000"/>
+            <style:paragraph-properties
+            fo:margin-left="1.2mm" fo:text-align="start"/>
+            </style:style>
+        """,
     },
     {
         "name": "right_grid_06pt",
@@ -335,6 +446,17 @@ DEFAULT_STYLES = [
          """,
     },
     {
+        "name": "center_grid_06pt",
+        "definition": """
+             <style:style style:family="table-cell"
+             style:parent-style-name="Default">
+             <style:table-cell-properties style:text-align-source="fix"
+             fo:border="0.06pt solid #000000"/>
+             <style:paragraph-properties fo:text-align="center"/>
+             </style:style>
+         """,
+    },
+    {
         "name": "integer_grid_06pt",
         "definition": """
              <style:style style:family="table-cell"
@@ -344,6 +466,17 @@ DEFAULT_STYLES = [
              fo:border="0.06pt solid #000000"/>
              <style:paragraph-properties
              fo:margin-left="1.2mm" fo:margin-right="1.2mm"/>
+             </style:style>
+         """,
+    },
+    {
+        "name": "integer_no_zero_grid_06pt",
+        "definition": """
+             <style:style style:family="table-cell"
+             style:parent-style-name="Default"
+             style:data-style-name="integer_no_zero">
+             <style:table-cell-properties
+             fo:border="0.06pt solid #000000"/>
              </style:style>
          """,
     },
@@ -641,6 +774,9 @@ def main():
         description="Generates an ODF .ods file from json or yaml file.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
+    )
+    parser.add_argument(
+        "--version", action="version", version="%(prog)s " + __version__
     )
     parser.add_argument(
         "input_file", help="input file containing data in json or yaml format"

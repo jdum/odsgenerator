@@ -1,5 +1,5 @@
 from os.path import join, dirname, abspath
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def content_of(rel_path):
@@ -42,7 +42,7 @@ setup(
     keywords="text json openDocument ODF ods generator",
     license="MIT",
     python_requires=">=3.6",
-    packages=["odsgenerator"],
+    packages=find_packages(),
     install_requires=["odfdo>=3.3", "pyyaml"],
     entry_points={"console_scripts": ["odsgenerator=odsgenerator.command_line:main"]},
 )

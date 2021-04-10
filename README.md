@@ -16,9 +16,9 @@ ODF document using the odfdo library.
 
 **usage:**
 
-    odsgenerator [-h] input_file output_file   
+    odsgenerator [-h] [--version] input_file output_file
 
-**positional arguments:**
+**arguments:**
 
   `input_file`:   input file containing data in json or yaml format
 
@@ -26,4 +26,4 @@ ODF document using the odfdo library.
 
 
 Use `odsgenerator --help` for more details about input file parameters and
-look at examples in the test folder.
+look at examples in the tests folder.

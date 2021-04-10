@@ -1,0 +1,557 @@
+{
+    "styles": [
+        {
+            "name": "bg_yellow",
+            "definition": "<style:style style:family=\"table-cell\"\nstyle:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\"/>\n<style:paragraph-properties\nfo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+        }, {
+            "name": "bg_yellow_grid06",
+            "definition": "\n<style:style style:family=\"table-cell\"\nstyle:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\"\nfo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties\nfo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+        }
+    ],
+    "body": [
+        {
+            "name": "demo styles",
+            "table": [
+                {
+                    "style": "default_table_row",
+                    "row": ["row style: default_table_row (row style)"]
+                }, {
+                    "style": "table_row_1cm",
+                    "row": ["table_row_1cm (row style) "]
+                },
+                [], {
+                    "style": "bold",
+                    "row": ["provided cell style:"]
+                },
+                [
+                    {
+                        "value": "no style applied"
+                    }, {
+                        "value": "some text"
+                    }, {
+                        "value": 0
+                    }, {
+                        "value": 123
+                    }, {
+                        "value": 3.141592654
+                    }
+                ],
+                [
+                    {
+                        "value": "bold"
+                    }, {
+                        "value": "some text",
+                        "style": "bold"
+                    }, {
+                        "value": 0,
+                        "style": "bold"
+                    }, {
+                        "value": 123,
+                        "style": "bold"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bold"
+                    }
+                ],
+                [
+                    {
+                        "value": "bold_center"
+                    }, {
+                        "value": "some text",
+                        "style": "bold_center"
+                    }, {
+                        "value": 0,
+                        "style": "bold_center"
+                    }, {
+                        "value": 123,
+                        "style": "bold_center"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bold_center"
+                    }
+                ],
+                [
+                    {
+                        "value": "left"
+                    }, {
+                        "value": "some text",
+                        "style": "left"
+                    }, {
+                        "value": 0,
+                        "style": "left"
+                    }, {
+                        "value": 123,
+                        "style": "left"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "left"
+                    }
+                ],
+                [
+                    {
+                        "value": "right"
+                    }, {
+                        "value": "some text",
+                        "style": "right"
+                    }, {
+                        "value": 0,
+                        "style": "right"
+                    }, {
+                        "value": 123,
+                        "style": "right"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "right"
+                    }
+                ],
+                [
+                    {
+                        "value": "center"
+                    }, {
+                        "value": "some text",
+                        "style": "center"
+                    }, {
+                        "value": 0,
+                        "style": "center"
+                    }, {
+                        "value": 123,
+                        "style": "center"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "center"
+                    }
+                ],
+                [
+                    {
+                        "value": "cell_decimal1"
+                    }, {
+                        "value": "some text",
+                        "style": "cell_decimal1"
+                    }, {
+                        "value": 0,
+                        "style": "cell_decimal1"
+                    }, {
+                        "value": 123,
+                        "style": "cell_decimal1"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "cell_decimal1"
+                    }
+                ],
+                [
+                    {
+                        "value": "cell_decimal2"
+                    }, {
+                        "value": "some text",
+                        "style": "cell_decimal2"
+                    }, {
+                        "value": 0,
+                        "style": "cell_decimal2"
+                    }, {
+                        "value": 123,
+                        "style": "cell_decimal2"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "cell_decimal2"
+                    }
+                ],
+                [
+                    {
+                        "value": "cell_decimal3"
+                    }, {
+                        "value": "some text",
+                        "style": "cell_decimal3"
+                    }, {
+                        "value": 0,
+                        "style": "cell_decimal3"
+                    }, {
+                        "value": 123,
+                        "style": "cell_decimal3"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "cell_decimal3"
+                    }
+                ],
+                [
+                    {
+                        "value": "cell_decimal4"
+                    }, {
+                        "value": "some text",
+                        "style": "cell_decimal4"
+                    }, {
+                        "value": 0,
+                        "style": "cell_decimal4"
+                    }, {
+                        "value": 123,
+                        "style": "cell_decimal4"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "cell_decimal4"
+                    }
+                ],
+                [
+                    {
+                        "value": "cell_decimal6"
+                    }, {
+                        "value": "some text",
+                        "style": "cell_decimal6"
+                    }, {
+                        "value": 0,
+                        "style": "cell_decimal6"
+                    }, {
+                        "value": 123,
+                        "style": "cell_decimal6"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "cell_decimal6"
+                    }
+                ],
+                [
+                    {
+                        "value": "grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "bold_left_bg_gray_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "bold_left_bg_gray_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "bold_left_bg_gray_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "bold_left_bg_gray_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bold_left_bg_gray_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "bold_right_bg_gray_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "bold_right_bg_gray_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "bold_right_bg_gray_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "bold_right_bg_gray_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bold_right_bg_gray_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "bold_center_bg_gray_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "bold_center_bg_gray_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "bold_center_bg_gray_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "bold_center_bg_gray_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bold_center_bg_gray_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "bold_left_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "bold_left_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "bold_left_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "bold_left_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bold_left_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "bold_right_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "bold_right_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "bold_right_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "bold_right_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bold_right_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "bold_center_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "bold_center_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "bold_center_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "bold_center_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bold_center_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "left_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "left_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "left_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "left_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "left_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "right_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "right_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "right_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "right_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "right_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "center_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "center_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "center_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "center_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "center_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "integer_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "integer_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "integer_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "integer_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "integer_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "integer_no_zero_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "integer_no_zero_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "integer_no_zero_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "integer_no_zero_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "integer_no_zero_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "center_integer_no_zero_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "center_integer_no_zero_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "center_integer_no_zero_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "center_integer_no_zero_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "center_integer_no_zero_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "decimal1_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "decimal1_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "decimal1_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "decimal1_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "decimal1_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "decimal2_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "decimal2_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "decimal2_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "decimal2_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "decimal2_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "decimal3_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "decimal3_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "decimal3_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "decimal3_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "decimal3_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "decimal4_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "decimal4_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "decimal4_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "decimal4_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "decimal4_grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": "decimal6_grid_06pt"
+                    }, {
+                        "value": "some text",
+                        "style": "decimal6_grid_06pt"
+                    }, {
+                        "value": 0,
+                        "style": "decimal6_grid_06pt"
+                    }, {
+                        "value": 123,
+                        "style": "decimal6_grid_06pt"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "decimal6_grid_06pt"
+                    }
+                ],
+                [], {
+                    "style": "bold",
+                    "row": ["some custom styles defined at the top of this json file:"]
+                },
+                [
+                    {
+                        "value": "bg_yellow"
+                    }, {
+                        "value": "some text",
+                        "style": "bg_yellow"
+                    }, {
+                        "value": 0,
+                        "style": "bg_yellow"
+                    }, {
+                        "value": 123,
+                        "style": "bg_yellow"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bg_yellow"
+                    }
+                ],
+                [
+                    {
+                        "value": "bg_yellow_grid06"
+                    }, {
+                        "value": "some text",
+                        "style": "bg_yellow_grid06"
+                    }, {
+                        "value": 0,
+                        "style": "bg_yellow_grid06"
+                    }, {
+                        "value": 123,
+                        "style": "bg_yellow_grid06"
+                    }, {
+                        "value": 3.141592654,
+                        "style": "bg_yellow_grid06"
+                    }
+                ]
+            ],
+            "width": ["7cm", "3cm", "3cm", "3cm", "3cm"]
+        }
+    ]
+}
