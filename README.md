@@ -1,4 +1,4 @@
-## odsgenerator
+## odsgenerator, an .ods generator.
 
 odsgenerator generates an OpenDocument Format .ods file from json or yaml file.
 
@@ -13,6 +13,10 @@ ODF document using the odfdo library.
   * a document is a list of tabs,
   * a tab is a list of rows,
   * a row is a list of cells.
+
+**documentation:**
+
+See tutorial.json or tutorial.yml and tutorial.ods in the doc folder.
 
 **usage:**
 

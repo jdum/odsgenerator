@@ -43,6 +43,7 @@ setup(
     license="MIT",
     python_requires=">=3.6",
     packages=find_packages(),
+    include_package_data=True,
     install_requires=["odfdo>=3.3", "pyyaml"],
     entry_points={"console_scripts": ["odsgenerator=odsgenerator.command_line:main"]},
 )

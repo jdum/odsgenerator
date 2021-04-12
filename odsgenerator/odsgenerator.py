@@ -49,7 +49,7 @@ A document can be:
 
 A style definition is a dict with 2 items:
     - name: str, the name of the style.
-    - an XML definition of the ODF style, see DEFAULT_STYLES below.
+    - an XML definition of the ODF style, see list below.
 
 The styles provided for a row or a table can be of family table-row or
 table-cell, they apply to row and below cells. A style defined at a
@@ -72,7 +72,7 @@ Styles:
 List of provided styles:
 grid_06pt means the cell is surrounded by a black border of 0.6 points,
 gray means the cell has a gray background.
-The file tests/result_test_styles.ods shows all the provided styles.
+The file doc/styles.ods shows all the provided styles.
 
 Row styles:
     - default_table_row
@@ -118,7 +118,7 @@ except ModuleNotFoundError:
 import odfdo
 from odfdo import Document, Table, Row, Cell, Element
 
-__version__ = "1.4.2"
+__version__ = "1.4.3"
 
 DEFAULT_STYLES = [
     {
