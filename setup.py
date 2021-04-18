@@ -15,15 +15,15 @@ def get_version(rel_path):
     raise RuntimeError("Unable to find version string.")
 
 
-long_description = content_of("README.md")
+long_description = content_of("README.rst")
 
 
 setup(
     name="odsgenerator",
     version=get_version("odsgenerator/odsgenerator.py"),
-    description="odsgenerator generates an ODF .ods file from json or yaml file",
+    description="Generate an OpenDocument Format .ods file from json or yaml file",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/x-rst",
     url="https://github.com/jdum/odsgenerator",
     author="Jérôme Dumonteil",
     author_email="jerome.dumonteil@gmail.com",

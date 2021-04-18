@@ -8,6 +8,7 @@ __pycache__
 *.swp
 *.orig
 build/
+_build/
 dist/
 *.log
 *egg-info/

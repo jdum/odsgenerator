@@ -1,5 +1,9 @@
-include README.md
-include doc/*.txt
+include README.rst
+include doc/*.py
+include doc/Makefile
+include doc/make.bat
+include doc/*.rst
+include doc/*.png
 include doc/*.json
 include doc/*.yml
 include doc/*.ods

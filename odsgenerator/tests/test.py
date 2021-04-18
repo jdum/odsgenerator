@@ -17,12 +17,12 @@ FILE4 = "test_use_case.json"
 class TestMain(TestCase):
     def test_no_args_odsgen(self):
         with self.assertRaises(TypeError) as cm:
-            og.odsgen()
+            og.file_to_ods()
             self.assertEqual(cm.exception.code, 0)
 
     def test_one_args_odsgen(self):
         with self.assertRaises(TypeError) as cm:
-            og.odsgen("some file")
+            og.file_to_ods("some file")
             self.assertEqual(cm.exception.code, 0)
 
 
@@ -45,13 +45,13 @@ class TestLoadFiles(TestCase):
     def test_run(self):
         for f in self.files:
             output = f + ".ods"
-            og.odsgen(f, output)
+            og.file_to_ods(f, output)
             self.assertTrue(os.path.isfile(output))
 
     def test_load(self):
         for f in self.files:
             output = f + ".ods"
-            og.odsgen(f, output)
+            og.file_to_ods(f, output)
             d = Document(output)
             self.assertIsInstance(d, Document)
 
@@ -61,7 +61,7 @@ class TestFile1(TestCase):
         self.output = FILE1 + ".ods"
         if os.path.isfile(self.output):
             os.remove(self.output)
-        og.odsgen(FILE1, self.output)
+        og.file_to_ods(FILE1, self.output)
         self.document = Document(self.output)
         self.body = self.document.body
 
@@ -185,7 +185,7 @@ class TestFile2(TestCase):
         self.output = FILE2 + ".ods"
         if os.path.isfile(self.output):
             os.remove(self.output)
-        og.odsgen(FILE2, self.output)
+        og.file_to_ods(FILE2, self.output)
         self.document = Document(self.output)
         self.body = self.document.body
 
@@ -294,7 +294,7 @@ class TestFile3(TestCase):
         self.output = FILE3 + ".ods"
         if os.path.isfile(self.output):
             os.remove(self.output)
-        og.odsgen(FILE3, self.output)
+        og.file_to_ods(FILE3, self.output)
         self.document = Document(self.output)
         self.body = self.document.body
 
@@ -416,7 +416,7 @@ class TestFile4(TestCase):
         self.output = FILE4 + ".ods"
         if os.path.isfile(self.output):
             os.remove(self.output)
-        og.odsgen(FILE4, self.output)
+        og.file_to_ods(FILE4, self.output)
         self.document = Document(self.output)
         self.body = self.document.body
 
@@ -556,6 +556,80 @@ class TestFile4(TestCase):
         t = tables[1]
         rows = t.get_rows()
         self.assertEqual(len(rows), 17)
+
+
+class Testsample1(TestCase):
+    def setUp(self):
+        self.output = "sample1.ods"
+        if os.path.isfile(self.output):
+            os.remove(self.output)
+
+    def tearDown(self):
+        try:
+            os.remove(self.output)
+        except IOError:
+            pass
+
+    def test_sample1(self):
+        raw = og.ods_bytes([[["a", "b", "c"], [10, 20, 30]]])
+        with open(self.output, "wb") as f:
+            f.write(raw)
+        self.assertTrue(os.path.isfile(self.output))
+        doc = Document(self.output)
+        tables = doc.body.get_tables()
+        t = tables[0]
+        rows = t.get_rows()
+        r1 = rows[0]
+        values1 = r1.get_values()
+        r2 = rows[1]
+        values2 = r2.get_values()
+        self.assertEqual(values1, ["a", "b", "c"])
+        self.assertEqual(values2, [10, 20, 30])
+
+
+class TestSample2(TestCase):
+    def setUp(self):
+        self.output = "sample2.ods"
+        if os.path.isfile(self.output):
+            os.remove(self.output)
+
+    def tearDown(self):
+        try:
+            os.remove(self.output)
+        except IOError:
+            pass
+
+    def test_sample2(self):
+        raw = og.ods_bytes(
+            [
+                {
+                    "name": "first tab",
+                    "style": "cell_decimal2",
+                    "table": [
+                        {
+                            "row": ["a", "b", "c"],
+                            "style": "bold_center_bg_gray_grid_06pt",
+                        },
+                        [10, 20, 30],
+                    ],
+                }
+            ]
+        )
+        with open(self.output, "wb") as f:
+            f.write(raw)
+        self.assertTrue(os.path.isfile(self.output))
+        doc = Document(self.output)
+        tables = doc.body.get_tables()
+        t = tables[0]
+        rows = t.get_rows()
+        r1 = rows[0]
+        values1 = r1.get_values()
+        r2 = rows[1]
+        values2 = r2.get_values()
+        self.assertEqual(values1, ["a", "b", "c"])
+        self.assertEqual(
+            values2, [Decimal("10.00"), Decimal("20.00"), Decimal("30.00")]
+        )
 
 
 if __name__ == "__main__":

@@ -2,114 +2,21 @@
 # Copyright 2021 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
-"""
-This script parses a JSON or YAML description of tables and generates an
-ODF document using the odfdo library.
-    - description can be minimalist: a list of lists of lists,
-    - description can be complex, allowing styles at row or cell level.
+"""Generate an OpenDocument Format .ods file from json or yaml file.
 
-Principle:
-    - a document is a list of tabs,
-    - a tab is a list of rows,
-    - a row is a list of cells.
+When used as a script, odsgenerator parses a JSON or YAML description of
+tables and generates an ODF document using the odfdo library.
 
-A cell can be:
-    - int, float or str
-    - a dict, with the following keys (only the 'value' key is mandatory):
-        - value: int, float or str
-        - style: str or list of str, a style name or a list of style names
-        - text: str, a string representation of the value (for ODF readers
-          who use it).
+When used as a library, odsgenerator parses a python description of tables
+and returns the ODF content as bytes.
 
-A row can be:
-    - a list of cells
-    - a dict, with the following keys (only the 'row' key is mandatory):
-        - row: a list of cells, see above
-        - style: str or list of str, a style name or a list of style names
-
-A tab can be:
-    - a list of rows
-    - a dict, with the following keys (only the 'table' key is mandatory):
-        - table: a list of rows,
-        - width: a list containing the width of each column of the table
-        - name: str, the name of the tab
-        - style: str or list of str, a style name or a list of style names
-
-A tab may have some post transformation:
-    - a list of span areas, cell coordinates are defined in the tab after its
-      creation using odfo method Table.set_span(), ie. Table.set_span("A1:B:3")
-      or Table.set_span([0, 0, 2, 1])
-
-A document can be:
-    - a list of tabs
-    - a dict, with the following keys (only the 'body' key is mandatory):
-        - body: a list of tabs
-        - styles: a list of dict of styles definitions
-        - defaults: a dict, for the defaults styles
-
-A style definition is a dict with 2 items:
-    - name: str, the name of the style.
-    - an XML definition of the ODF style, see list below.
-
-The styles provided for a row or a table can be of family table-row or
-table-cell, they apply to row and below cells. A style defined at a
-lower level (cell for instance) has priority over the style defined above
-(row for instance).
-
-In short, if you don't need custom styles, this is a valid document
-description:
-    '[ [ ["a", "b", "c" ] ] ]'
-
-This json string will create a document with only one tab (name will
-be "Tab 1" by default), containing one row of 3 values "a", "b", "c".
-
-Styles:
-    - the DEFAULT_STYLES constant defines styles always available, they can be
-      called by their name for cells or rows.
-    - To add a custom style, use the "styles" category of the document dict.
-      A style is a dict with 2 keys, "definition" and "name".
-
-List of provided styles:
-grid_06pt means the cell is surrounded by a black border of 0.6 points,
-gray means the cell has a gray background.
-The file doc/styles.ods shows all the provided styles.
-
-Row styles:
-    - default_table_row
-    - table_row_1cm
-Cell styles:
-    - bold
-    - bold_center
-    - left
-    - right
-    - center
-    - cell_decimal1
-    - cell_decimal2
-    - cell_decimal3
-    - cell_decimal4
-    - cell_decimal6
-    - grid_06pt
-    - bold_left_bg_gray_grid_06pt
-    - bold_right_bg_gray_grid_06pt
-    - bold_center_bg_gray_grid_06pt
-    - bold_left_grid_06pt
-    - bold_right_grid_06pt
-    - bold_center_grid_06pt
-    - left_grid_06pt
-    - right_grid_06pt
-    - center_grid_06pt
-    - integer_grid_06pt
-    - integer_no_zero_grid_06pt
-    - center_integer_no_zero_grid_06pt
-    - decimal1_grid_06pt
-    - decimal2_grid_06pt
-    - decimal3_grid_06pt
-    - decimal4_grid_06pt
-    - decimal6_grid_06pt
+    -  description can be minimalist: a list of lists of lists,
+    -  description can be complex, allowing styles at row or cell level.
 """
 
 import sys
 import argparse
+import io
 
 try:
     import yaml
@@ -118,7 +25,7 @@ except ModuleNotFoundError:
 import odfdo
 from odfdo import Document, Table, Row, Cell, Element
 
-__version__ = "1.4.3"
+__version__ = "1.4.5"
 
 DEFAULT_STYLES = [
     {
@@ -584,6 +491,16 @@ DEFAULT_TAB_PREFIX = "Tab"
 
 
 class ODSGenerator:
+    """Core class of odsgenerator.
+
+    The class parses the input description and generate an ODF document.
+    Use ODSGenerator via the front-end functions ods_bytes() or
+    content_to_ods().
+
+    Args:
+        content (list or dict): Description of tables.
+    """
+
     def __init__(self, content):
         self.doc = Document("spreadsheet")
         self.doc.body.clear()
@@ -594,9 +511,15 @@ class ODSGenerator:
         self.parse(content)
 
     def save(self, path):
+        """Save the resulting ODF document.
+
+        Args:
+            path (str or Path or BytesIO): Path of the ODF output file.
+        """
         self.doc.save(path)
 
     def parse_styles(self, opt):
+        """Load all available styles, from default and the input description."""
         for s in DEFAULT_STYLES:
             try:
                 style = Element.from_tag(s[DEFINITION])
@@ -621,12 +544,26 @@ class ODSGenerator:
                     self.insert_style(name)
 
     def insert_style(self, name, automatic=True):
+        """Insert the named style into the ODF document."""
         if name and name not in self.used_styles and name in self.styles_elements:
             style = self.styles_elements[name]
             self.doc.insert_style(style, automatic=automatic)
             self.used_styles.add(name)
 
     def guess_style(self, opt, family, default):
+        """Guess which style to apply.
+
+        Search list of styles under the "style" key, check against family of
+        style, apply default if none found.
+
+        Args:
+            opt (dict): Part of input description.
+            family (str): ODF family style.
+            default (str): Default style name.
+
+        Returns:
+            str or None: Name of he style to apply.
+        """
         style_list = opt.get(STYLE, [])
         if not isinstance(style_list, list):
             style_list = [style_list]
@@ -643,6 +580,18 @@ class ODSGenerator:
 
     @staticmethod
     def split(item, key):
+        """Extract the value of the key if item is a dict.
+
+        If item is a dict, pop the value from the key, else consider that item
+        is already the response.
+
+        Args:
+            item (any type): Part of input description.
+            key (str): Key to extract.
+
+        Returns:
+            tuple: extracted content, remaining dict.
+        """
         if isinstance(item, dict):
             inner = item.pop(key, [])
             return (inner, item)
@@ -650,6 +599,7 @@ class ODSGenerator:
         return (item, {})
 
     def parse(self, content):
+        """Parse the top level of the input description."""
         body, opt = self.split(content, BODY)
         self.defaults.update(opt.get(DEFAULTS, {}))
         self.parse_styles(opt)
@@ -657,6 +607,7 @@ class ODSGenerator:
             self.parse_table(table_content)
 
     def parse_table(self, table_content):
+        """Parse a table level from the input description."""
         rows, opt = self.split(table_content, TABLE)
         self.tab_counter += 1
         table = Table(opt.get(NAME, f"{DEFAULT_TAB_PREFIX} {self.tab_counter}"))
@@ -673,6 +624,7 @@ class ODSGenerator:
         self.doc.body.append(table)
 
     def parse_row(self, table, row_content, style_table_row, style_table_cell):
+        """Parse a row level from the input description."""
         cells, opt = self.split(row_content, ROW)
         style_table_row = self.guess_style(opt, "table-row", style_table_row)
         self.insert_style(style_table_row)
@@ -683,6 +635,7 @@ class ODSGenerator:
         table.append(row)
 
     def parse_cell(self, row, cell_content, style_table_cell):
+        """Parse a cell level from the input description."""
         value, opt = self.split(cell_content, VALUE)
         if style_table_cell:
             default = style_table_cell
@@ -706,7 +659,14 @@ class ODSGenerator:
         row.append(cell)
 
     def column_width_style(self, width):
-        """width format: "10.5mm"""
+        """Generate an ODF style for a column width.
+
+        Args:
+            width (str): The required width, any ODF format like "10.5mm".
+
+        Returns:
+            str: The XML string of the style.
+        """
         return self.doc.insert_style(
             Element.from_tag(
                 f"""
@@ -720,6 +680,7 @@ class ODSGenerator:
         )
 
     def parse_width(self, table, opt):
+        """Parse the width tag of the input description."""
         width_opt = opt.get(WIDTH)
         if not width_opt:
             return
@@ -736,6 +697,7 @@ class ODSGenerator:
 
     @staticmethod
     def parse_span(table, opt):
+        """Parse the span tag of the input description."""
         span_opt = opt.get(SPAN)
         if not span_opt:
             return
@@ -745,22 +707,62 @@ class ODSGenerator:
             table.set_span(area)
 
 
-def content_to_ods(data, dest_path):
-    doc = ODSGenerator(data)
-    doc.save(dest_path)
+def content_to_ods(content, output_path):
+    """Parse document description and save resulting ODF to file.
+
+    Args:
+        content (list or dict): Input description of tables.
+        output_path (str or Path or BytesIO): Path of the ODF output file.
+    """
+    doc = ODSGenerator(content)
+    doc.save(output_path)
 
 
-def odsgen(param_file, dest_path):
+def file_to_ods(input_path, output_path):
+    """Parse the input file and save resulting ODF to file.
+
+    The input file can be JSON or other YAML format.
+
+    Args:
+        input_path (str or Path): Path of the file with desription to parse.
+        output_path (str or Path or BytesIO): Path of the ODF output file.
+    """
     if "yaml" in sys.modules:
-        with open(param_file, mode="r", encoding="utf8") as f:
+        with open(input_path, mode="r", encoding="utf8") as f:
             content = yaml.load(f, yaml.SafeLoader)
     else:  # fall back to json
-        with open(param_file, mode="r", encoding="utf8") as f:
+        with open(input_path, mode="r", encoding="utf8") as f:
             content = json.load(f)
-    content_to_ods(content, dest_path)
+    content_to_ods(content, output_path)
+
+
+def ods_bytes(content):
+    """Parse the document description and generate an ODF document as bytes.
+
+    This is the recommended front-end when odsgenerator is used as a library.
+
+    Example:
+    >>> raw = odsgenerator.ods_bytes([[["a", "b", "c"], [10, 20, 30]]])
+    >>> with open("sample1.ods", "wb") as f:
+    ...     f.write(raw)
+
+    ...
+    7266
+
+    Args:
+        content (list or dict): Input description of tables.
+
+    Returns:
+        bytes: Zipped OpenDocument format.
+    """
+    with io.BytesIO() as b:
+        doc = ODSGenerator(content)
+        doc.save(b)
+        return b.getvalue()
 
 
 def check_odfdo_version():
+    """Utility to verify we have the minimal version of the odfdo library."""
     if tuple(int(x) for x in odfdo.__version__.split(".")) > (3, 3, 0):
         return True
     print("Error: I need odfdo version >= 3.3.0")
@@ -768,6 +770,19 @@ def check_odfdo_version():
 
 
 def main():
+    """Read parameters from STDIN and apply the required command.
+
+    Usage:
+       odsgenerator [-h] [--version] input_file output_file
+
+    Arguments:
+        input_file: Input file containing data in json or yaml format.
+
+        output_file: Output file, .ods file generated from input.
+
+    Use `odsgenerator --help` for more details about input file parameters
+    and look at examples in the tests folder.
+    """
     if not check_odfdo_version():
         sys.exit(1)
     parser = argparse.ArgumentParser(
@@ -785,7 +800,7 @@ def main():
         "output_file", help="output file, .ods file generated from input"
     )
     args = parser.parse_args()
-    odsgen(args.input_file, args.output_file)
+    file_to_ods(args.input_file, args.output_file)
 
 
 if __name__ == "__main__":
