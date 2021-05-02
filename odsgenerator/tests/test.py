@@ -93,7 +93,7 @@ class TestFile1(TestCase):
         r = rows[0]
         values = r.get_values()
         self.assertEqual(
-            values, ["spanned cell", None, None, "d", "e", "f", "g", "h", "i", "j"]
+            values, ["spanned cell", None, None, "d", "e", "f", "g", "h", None, "j"]
         )
 
     def test_t0_r1_values(self):
@@ -102,7 +102,7 @@ class TestFile1(TestCase):
         rows = t.get_rows()
         r = rows[1]
         values = r.get_values()
-        self.assertEqual(values, [None, None, None, 30, 40, 50, 60, 70, 80, 90])
+        self.assertEqual(values, [None, None, None, 30, 40, 50, 60, None, None, 90])
 
     def test_t0_r2_values(self):
         tables = self.body.get_tables()
@@ -110,7 +110,7 @@ class TestFile1(TestCase):
         rows = t.get_rows()
         r = rows[2]
         values = r.get_values()
-        self.assertEqual(values, [1, 11, 21, 31, 41, 51, 61, 71, 81, 91])
+        self.assertEqual(values, [1, 11, 21, 31, 41, 51, 61, 71, None, None])
 
     def test_t0_r3_values(self):
         tables = self.body.get_tables()
@@ -326,7 +326,7 @@ class TestFile3(TestCase):
         r = rows[0]
         values = r.get_values()
         self.assertEqual(
-            values, ["spanned cell", None, None, "d", "e", "f", "g", "h", "i", "j"]
+            values, ["spanned cell", None, None, "d", "e", "f", "g", "h", None, "j"]
         )
 
     def test_t0_r1_values(self):
@@ -335,7 +335,7 @@ class TestFile3(TestCase):
         rows = t.get_rows()
         r = rows[1]
         values = r.get_values()
-        self.assertEqual(values, [None, None, None, 30, 40, 50, 60, 70, 80, 90])
+        self.assertEqual(values, [None, None, None, 30, 40, 50, 60, None, None, 90])
 
     def test_t0_r2_values(self):
         tables = self.body.get_tables()
@@ -343,7 +343,7 @@ class TestFile3(TestCase):
         rows = t.get_rows()
         r = rows[2]
         values = r.get_values()
-        self.assertEqual(values, [1, 11, 21, 31, 41, 51, 61, 71, 81, 91])
+        self.assertEqual(values, [1, 11, 21, 31, 41, 51, 61, 71, None, None])
 
     def test_t0_r3_values(self):
         tables = self.body.get_tables()

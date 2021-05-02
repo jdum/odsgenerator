@@ -97,7 +97,10 @@ principle
 documentation
 -------------
 
-See ``tutorial.json`` or ``tutorial.yml`` and ``tutorial.ods`` in the doc folder.
+See in the doc folder:
+
+-  ``html/odsgenerator.html``
+-  ``tutorial.json`` or ``tutorial.yml`` and ``tutorial.ods``
 
 
 license

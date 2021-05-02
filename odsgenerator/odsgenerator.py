@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 import odfdo
 from odfdo import Document, Table, Row, Cell, Element
 
-__version__ = "1.4.5"
+__version__ = "1.4.6"
 
 DEFAULT_STYLES = [
     {
@@ -479,6 +479,8 @@ BODY = "body"
 TABLE = "table"
 ROW = "row"
 VALUE = "value"
+COLSPAN = "colspanned"
+ROWSPAN = "rowspanned"
 TEXT = "text"
 NAME = "name"
 DEFINITION = "definition"
@@ -508,6 +510,7 @@ class ODSGenerator:
         self.defaults = DEFAULTS_DICT
         self.styles_elements = {}
         self.used_styles = set()
+        self.spanned_cells = []
         self.parse(content)
 
     def save(self, path):
@@ -620,7 +623,7 @@ class ODSGenerator:
         for row_content in rows:
             self.parse_row(table, row_content, style_table_row, style_table_cell)
         self.parse_width(table, opt)
-        self.parse_span(table, opt)
+        self.parse_spanned(table, opt)
         self.doc.body.append(table)
 
     def parse_row(self, table, row_content, style_table_row, style_table_cell):
@@ -630,9 +633,9 @@ class ODSGenerator:
         self.insert_style(style_table_row)
         row = Row(style=style_table_row)
         style_table_cell = self.guess_style(opt, "table-cell", style_table_cell)
+        row = table.append_row(row)
         for cell_content in cells:
             self.parse_cell(row, cell_content, style_table_cell)
-        table.append(row)
 
     def parse_cell(self, row, cell_content, style_table_cell):
         """Parse a cell level from the input description."""
@@ -656,7 +659,9 @@ class ODSGenerator:
         if attr:
             for k, v in attr.items():
                 cell.set_attribute(k, v)
-        row.append(cell)
+        cell = row.append(cell)
+        if COLSPAN in opt or ROWSPAN in opt:
+            self.store_spanned_cell(cell, opt)
 
     def column_width_style(self, width):
         """Generate an ODF style for a column width.
@@ -695,16 +700,25 @@ class ODSGenerator:
             column.style = self.column_width_style(width_opt)
             table.set_column(position, column)
 
-    @staticmethod
-    def parse_span(table, opt):
+    def parse_spanned(self, table, opt):
         """Parse the span tag of the input description."""
         span_opt = opt.get(SPAN)
         if not span_opt:
             return
         if not isinstance(span_opt, list):
             span_opt = [span_opt]
+        span_opt.extend(self.spanned_cells)
         for area in span_opt:
             table.set_span(area)
+
+    def store_spanned_cell(self, cell, opt):
+        colspan = max(1, int(opt.get(COLSPAN, 1)))
+        rowspan = max(1, int(opt.get(ROWSPAN, 1)))
+        if colspan < 2 and rowspan < 2:
+            return
+        self.spanned_cells.append(
+            [cell.x, cell.y, cell.x + colspan - 1, cell.y + rowspan - 1]
+        )
 
 
 def content_to_ods(content, output_path):

@@ -303,15 +303,47 @@
                     }
                 ],
                 [], {
-                    "row": ["Spanned cells are defined at tab level with key \"span\"."],
+                    "row": ["Spanned cells can be defined in 2 ways:"],
                     "style": "left"
                 }, {
-                    "row": ["Coordinate can use the (x0,y0,x1,y1) or \"C0R0:C1R1\" system."],
+                    "row": [
+                        "", "- at tab level with key \"span\"."
+                    ],
                     "style": "left"
                 }, {
-                    "row": ["Here we have spanned [0 , 1, 2, 2] and \"A1:G1\"."],
+                    "row": [
+                        "", "Coordinate can use the (x0,y0,x1,y1) or \"C0R0:C1R1\" system."
+                    ],
                     "style": "left"
-                }
+                }, {
+                    "row": [
+                        "", "Here we have spanned [0 , 1, 2, 2] and \"A1:G1\"."
+                    ],
+                    "style": "left"
+                },
+                [], {
+                    "row": [
+                        "", "- at cell level with keys \"colspanned\" and \"rowspanned\"."
+                    ],
+                    "style": "left"
+                }, {
+                    "row": [
+                        "", "At least one of them must be set with the number of rows or cells to cover."
+                    ],
+                    "style": "left"
+                }, {
+                    "row": [
+                        "", "Here we have spanned the cell below by 3 columnss and 2 rows:"
+                    ],
+                    "style": "left"
+                },
+                [
+                    "", {
+                        "value": "spanned",
+                        "colspanned": 3,
+                        "rowspanned": 2
+                    }
+                ]
             ],
             "width": [
                 "15mm",
