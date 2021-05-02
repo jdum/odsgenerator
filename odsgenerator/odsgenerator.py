@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 import odfdo
 from odfdo import Document, Table, Row, Cell, Element
 
-__version__ = "1.4.6"
+__version__ = "1.4.7"
 
 DEFAULT_STYLES = [
     {

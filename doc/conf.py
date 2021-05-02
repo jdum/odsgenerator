@@ -22,9 +22,9 @@ copyright = "2021, Jérôme Dumonteil"
 author = "Jérôme Dumonteil"
 
 # The short X.Y version
-version = "1.4.6"
+version = "1.4.7"
 # The full version, including alpha/beta/rc tags
-release = "1.4.6"
+release = "1.4.7"
 
 
 # -- General configuration ---------------------------------------------------
