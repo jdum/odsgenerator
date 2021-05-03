@@ -22,9 +22,9 @@ copyright = "2021, Jérôme Dumonteil"
 author = "Jérôme Dumonteil"
 
 # The short X.Y version
-version = "1.4.7"
+version = "1.4.8"
 # The full version, including alpha/beta/rc tags
-release = "1.4.7"
+release = "1.4.8"
 
 
 # -- General configuration ---------------------------------------------------
@@ -36,9 +36,9 @@ release = "1.4.7"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    "sphinx.ext.autodoc",
-]
+extensions = []
+# "sphinx.ext.autodoc",
+# ]
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']

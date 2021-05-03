@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 import odfdo
 from odfdo import Document, Table, Row, Cell, Element
 
-__version__ = "1.4.7"
+__version__ = "1.4.8"
 
 DEFAULT_STYLES = [
     {
@@ -620,6 +620,7 @@ class ODSGenerator:
         style_table_cell = self.guess_style(
             opt, "table-cell", self.defaults["style_table_cell"]
         )
+        self.spanned_cells = []  # spanned_cells is relative to this table
         for row_content in rows:
             self.parse_row(table, row_content, style_table_row, style_table_cell)
         self.parse_width(table, opt)
@@ -703,11 +704,12 @@ class ODSGenerator:
     def parse_spanned(self, table, opt):
         """Parse the span tag of the input description."""
         span_opt = opt.get(SPAN)
-        if not span_opt:
-            return
-        if not isinstance(span_opt, list):
-            span_opt = [span_opt]
-        span_opt.extend(self.spanned_cells)
+        if span_opt:
+            if not isinstance(span_opt, list):
+                span_opt = [span_opt]
+            span_opt.extend(self.spanned_cells)
+        else:
+            span_opt = self.spanned_cells
         for area in span_opt:
             table.set_span(area)
 
