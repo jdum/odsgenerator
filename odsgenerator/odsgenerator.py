@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 import odfdo
 from odfdo import Document, Table, Row, Cell, Element
 
-__version__ = "1.4.8"
+__version__ = "1.4.9"
 
 DEFAULT_STYLES = [
     {
@@ -111,7 +111,6 @@ DEFAULT_STYLES = [
             number:grouping="false"/>
             </number:number-style>
         """,
-        "always_insert": True,
     },
     {
         "name": "cell_decimal1",
@@ -132,7 +131,6 @@ DEFAULT_STYLES = [
             number:grouping="false"/>
             </number:number-style>
         """,
-        "always_insert": True,
     },
     {
         "name": "cell_decimal2",
@@ -153,7 +151,6 @@ DEFAULT_STYLES = [
             number:grouping="false"/>
             </number:number-style>
         """,
-        "always_insert": True,
     },
     {
         "name": "cell_decimal3",
@@ -174,7 +171,6 @@ DEFAULT_STYLES = [
             number:grouping="false"/>
             </number:number-style>
         """,
-        "always_insert": True,
     },
     {
         "name": "cell_decimal4",
@@ -195,7 +191,6 @@ DEFAULT_STYLES = [
             number:grouping="false"/>
             </number:number-style>
         """,
-        "always_insert": True,
     },
     {
         "name": "cell_decimal6",
@@ -216,7 +211,6 @@ DEFAULT_STYLES = [
             number:grouping="false"/>
             </number:number-style>
         """,
-        "always_insert": True,
     },
     {
         "name": "integer_no_zero",
@@ -226,7 +220,6 @@ DEFAULT_STYLES = [
             number:grouping="false"/>
             </number:number-style>
         """,
-        "always_insert": True,
     },
     {
         "name": "grid_06pt",
@@ -521,30 +514,26 @@ class ODSGenerator:
         """
         self.doc.save(path)
 
-    def parse_styles(self, opt):
-        """Load all available styles, from default and the input description."""
-        for s in DEFAULT_STYLES:
-            try:
-                style = Element.from_tag(s[DEFINITION])
-            except Exception:
-                print("-" * 80)
-                print(s)
-                print("-" * 80)
-                raise
-            style.name = s[NAME]
-            self.styles_elements[s[NAME]] = style
-            if s.get("always_insert"):
-                self.insert_style(s[NAME])
-        styles = opt.get(STYLES)
-        if isinstance(styles, list):
-            for s in styles:
-                name = s.get(NAME)
-                definition = s.get(DEFINITION)
-                style = Element.from_tag(definition)
+    def parse_styles(self, styles, insert=False):
+        """Load available styles, either from default and the input description.
+
+        Args:
+            styles (list): List of styles definitions.
+            insert (bool): Force inseerti in document.
+        """
+        if not styles:
+            return
+        for s in styles:
+            name = s.get(NAME)
+            definition = s.get(DEFINITION)
+            style = Element.from_tag(definition)
+            if name:
                 style.name = name
-                self.styles_elements[name] = style
-                if s.get("always_insert"):
-                    self.insert_style(name)
+            else:
+                name = style.name
+            self.styles_elements[name] = style
+            if insert:
+                self.insert_style(name)
 
     def insert_style(self, name, automatic=True):
         """Insert the named style into the ODF document."""
@@ -552,6 +541,10 @@ class ODSGenerator:
             style = self.styles_elements[name]
             self.doc.insert_style(style, automatic=automatic)
             self.used_styles.add(name)
+            # add style dependacies
+            for k, v in style.attributes.items():
+                if k.endswith("style-name"):
+                    self.insert_style(v)
 
     def guess_style(self, opt, family, default):
         """Guess which style to apply.
@@ -605,7 +598,8 @@ class ODSGenerator:
         """Parse the top level of the input description."""
         body, opt = self.split(content, BODY)
         self.defaults.update(opt.get(DEFAULTS, {}))
-        self.parse_styles(opt)
+        self.parse_styles(DEFAULT_STYLES)
+        self.parse_styles(opt.get(STYLES), insert=True)
         for table_content in body:
             self.parse_table(table_content)
 

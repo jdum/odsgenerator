@@ -74,39 +74,41 @@ Principle
 A cell can be:
     - int, float or str
     - a dict, with the following keys (only the 'value' key is mandatory):
-        - value: int, float or str
-        - style: str or list of str, a style name or a list of style names
+        - value: int, float or str,
+        - style: str or list of str, a style name or a list of style names,
         - text: str, a string representation of the value (for ODF readers
-          who use it).
+          who use it),
+        - colspanned: int, the number of spanned columns,
+        - rowspanned: int, the number of spanned rows.
 
 A row can be:
-    - a list of cells
+    - a list of cells,
     - a dict, with the following keys (only the 'row' key is mandatory):
-        - row: a list of cells, see above
-        - style: str or list of str, a style name or a list of style names
+        - row: a list of cells, see above,
+        - style: str or list of str, a style name or a list of style names.
 
 A tab can be:
-    - a list of rows
+    - a list of rows,
     - a dict, with the following keys (only the 'table' key is mandatory):
         - table: a list of rows,
-        - width: a list containing the width of each column of the table
-        - name: str, the name of the tab
-        - style: str or list of str, a style name or a list of style names
+        - width: a list containing the width of each column of the table,
+        - name: str, the name of the tab,
+        - style: str or list of str, a style name or a list of style names.
 
 A tab may have some post transformation:
     - a list of span areas, cell coordinates are defined in the tab after
       its creation using odfo method Table.set_span(), with either
-      coordiante system: "A1:B3" or [0, 0, 2, 1]
+      coordiante system: "A1:B3" or [0, 0, 2, 1].
 
 A document can be:
-    - a list of tabs
+    - a list of tabs,
     - a dict, with the following keys (only the 'body' key is mandatory):
-        - body: a list of tabs
-        - styles: a list of dict of styles definitions
-        - defaults: a dict, for the defaults styles
+        - body: a list of tabs,
+        - styles: a list of dict of styles definitions,
+        - defaults: a dict, for the defaults styles.
 
 A style definition is a dict with 2 items:
-    - name: str, the name of the style.
+    - name: str, the name of the style,
     - an XML definition of the ODF style, see list below.
 
 The styles provided for a row or a table can be of family table-row or
