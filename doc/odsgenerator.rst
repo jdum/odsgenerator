@@ -17,7 +17,7 @@ and returns the ODF content as bytes.
 -  description can be complex, allowing styles at row or cell level.
 
 See also https://github.com/jdum/odsparsator which is doing the reverse
-operation.
+operation, ods => json.
 
 
 Installation
@@ -113,6 +113,8 @@ A **cell** can be:
         - style: str or list of str, a style name or a list of style names,
         - text: str, a string representation of the value (for ODF readers
           who use it),
+        - formula: str, content of the 'table:formula' attribute, some "of:"
+          OpenFormula string,
         - colspanned: int, the number of spanned columns,
         - rowspanned: int, the number of spanned rows.
 
@@ -143,7 +145,8 @@ A **document** can be:
         - defaults: a dict, for the defaults styles.
 
 A **style** definition is a dict with 2 items:
-    - name: str, the name of the style,
+    - the name of the style (optional, if not present the attribute
+      style:name of the definition is used),
     - an XML definition of the ODF style, see list below.
 
 The styles provided for a row or a table can be of family table-row or

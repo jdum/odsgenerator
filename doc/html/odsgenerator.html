@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
 
-    <title>odsgenerator, an .ods generator. &#8212; odsgenerator 1.4.8 documentation</title>
+    <title>odsgenerator, an .ods generator. &#8212; odsgenerator 1.5.0 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -43,7 +43,7 @@ and returns the ODF content as bytes.</p>
 <li><p>description can be complex, allowing styles at row or cell level.</p></li>
 </ul>
 <p>See also <a class="reference external" href="https://github.com/jdum/odsparsator">https://github.com/jdum/odsparsator</a> which is doing the reverse
-operation.</p>
+operation, ods =&gt; json.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install odsgenerator
@@ -124,6 +124,8 @@ and look at examples in the tests folder.</p>
 <li><p>style: str or list of str, a style name or a list of style names,</p></li>
 <li><p>text: str, a string representation of the value (for ODF readers
 who use it),</p></li>
+<li><p>formula: str, content of the ‘table:formula’ attribute, some “of:”
+OpenFormula string,</p></li>
 <li><p>colspanned: int, the number of spanned columns,</p></li>
 <li><p>rowspanned: int, the number of spanned rows.</p></li>
 </ul>
@@ -178,7 +180,8 @@ coordiante system: “A1:B3” or [0, 0, 2, 1].</p></li>
 </ul>
 </dd>
 <dt>A <strong>style</strong> definition is a dict with 2 items:</dt><dd><ul class="simple">
-<li><p>name: str, the name of the style,</p></li>
+<li><p>the name of the style (optional, if not present the attribute
+style:name of the definition is used),</p></li>
 <li><p>an XML definition of the ODF style, see list below.</p></li>
 </ul>
 </dd>

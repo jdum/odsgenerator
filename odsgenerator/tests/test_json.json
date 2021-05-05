@@ -6,6 +6,10 @@
         }, {
             "name": "bg_yellow_grid06",
             "definition": "\n<style:style style:family=\"table-cell\"\nstyle:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\"\nfo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties\nfo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+        }, {
+            "definition": "<style:style style:name=\"blue_named\" style:family=\"table-cell\"\nstyle:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#aaaaff\"/>\n<style:paragraph-properties\nfo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+        }, {
+            "definition": "\n<style:style  style:name=\"blue_named_grid\" style:family=\"table-cell\"\nstyle:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#aaaaff\"\nfo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties\nfo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
         }
     ],
     "defaults": {
@@ -117,8 +121,10 @@
                             "value": 121,
                             "style": "bg_yellow_grid06"
                         },
-                        131,
-                        141,
+                        131, {
+                            "value": 141,
+                            "style": "blue_named_grid"
+                        },
                         151,
                         161,
                         171,

@@ -12,6 +12,7 @@ FILE1 = "test_json.json"
 FILE2 = "test_minimal.json"
 FILE3 = "test_yaml.yml"
 FILE4 = "test_use_case.json"
+FILE5 = "test_formula.json"
 
 
 class TestMain(TestCase):
@@ -28,7 +29,7 @@ class TestMain(TestCase):
 
 class TestLoadFiles(TestCase):
     def setUp(self):
-        self.files = FILE1, FILE2, FILE3
+        self.files = FILE1, FILE2, FILE3, FILE4, FILE5
         for f in self.files:
             output = f + ".ods"
             if os.path.isfile(output):
@@ -414,7 +415,9 @@ class TestFile3(TestCase):
         rows = t.get_rows()
         r = rows[3]
         values = r.get_values()
-        self.assertEqual(values, ["abc", 112, 122, 132, 0, 152, 0, 172, 0, 192])
+        self.assertEqual(
+            values, [Decimal("102.314"), 112, 122, 132, 0, 152, 0, 172, 0, 192]
+        )
 
 
 class TestFile4(TestCase):
@@ -562,6 +565,35 @@ class TestFile4(TestCase):
         t = tables[1]
         rows = t.get_rows()
         self.assertEqual(len(rows), 17)
+
+
+class TestFile5(TestCase):
+    def setUp(self):
+        self.output = FILE5 + ".ods"
+        if os.path.isfile(self.output):
+            os.remove(self.output)
+        og.file_to_ods(FILE5, self.output)
+        self.document = Document(self.output)
+        self.body = self.document.body
+
+    def tearDown(self):
+        try:
+            os.remove(self.output)
+        except IOError:
+            pass
+
+    def test_tables(self):
+        tables = self.body.get_tables()
+        self.assertEqual(len(tables), 1)
+
+    def test_t0_r3_formula(self):
+        tables = self.body.get_tables()
+        t = tables[0]
+        rows = t.get_rows()
+        r = rows[3]
+        cell = r.get_cell(1)
+        formula = "of:=[.B3]+[.B2]"
+        self.assertEqual(cell.formula, formula)
 
 
 class Testsample1(TestCase):

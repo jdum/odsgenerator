@@ -17,7 +17,7 @@ and returns the ODF content as bytes.
 -  description can be complex, allowing styles at row or cell level.
 
 See also https://github.com/jdum/odsparsator which is doing the reverse
-operation.
+operation, ods => json.
 
 
 installation
