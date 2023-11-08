@@ -1,3 +1,0 @@
-pyyaml
-lxml
-odfdo>=3.3.0

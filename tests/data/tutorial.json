@@ -1,0 +1,367 @@
+{
+    "body": [
+        [
+            [
+                "Minimal tab",
+                "description",
+                "with 6",
+                "columns",
+                "and 2",
+                "rows."
+            ],
+            [
+                1234,
+                0,
+                1,
+                3.14,
+                "2021-3-22",
+                "abc"
+            ]
+        ], {
+            "name": "Default center",
+            "style": "center",
+            "table": [
+                [
+                    "This tab",
+                    "has a",
+                    "name and",
+                    "a default",
+                    "style \"center\"",
+                    "applied to",
+                    "all cells."
+                ],
+                [
+                    1,
+                    0,
+                    3.14,
+                    12345,
+                    "2021-3-22",
+                    "abcd",
+                    42
+                ],
+                [
+                    "When a",
+                    "parameter",
+                    "is applied",
+                    "at table",
+                    "level,",
+                    "the key",
+                    '"table"',
+                    "points to",
+                    "the list",
+                    "of rows."
+                ]
+            ]
+        }, {
+            "name": "Col widths",
+            "style": "center",
+            "table": [
+                [
+                    "The",
+                    "columns",
+                    "have",
+                    "now",
+                    "a defined",
+                    "width."
+                ],
+                [
+                    1,
+                    0,
+                    3.14,
+                    12345,
+                    "2021-3-22",
+                    "abcd"
+                ],
+                [
+                    "The",
+                    "widths",
+                    "are",
+                    "defined",
+                    "at tab",
+                    "level",
+                    "with",
+                    "key",
+                    '"width".'
+                ]
+            ],
+            "width": [
+                "15mm",
+                "2cm",
+                "1inch",
+                "3cm",
+                "4cm",
+                "2cm"
+            ]
+        }, {
+            "name": "Row style",
+            "style": "center",
+            "table": [
+                {
+                    "row": [
+                        "Apply",
+                        "some",
+                        "style",
+                        "at",
+                        "row",
+                        "level."
+                    ],
+                    "style": "bold_center"
+                }, {
+                    "row": [
+                        1,
+                        0,
+                        3.14,
+                        12345,
+                        "2021-3-22",
+                        "abcd"
+                    ],
+                    "style": ["cell_decimal2", "table_row_1cm"]
+                },
+                [], {
+                    "row": ["(The row above is an empty)"],
+                    "style": "left"
+                },
+                [], {
+                    "row": ["When a parameter is applied at row level, the key \"row\" points to the list of cells of the row."],
+                    "style": "left"
+                },
+                [], {
+                    "row": ["Both family=\"table-row\" and family=\"table-cell\" can apply for a row, the table-cell will be the default style for cells of the row."],
+                    "style": "left"
+                }, {
+                    "row": ["The row 2 has both 1cm height row style and decimal2 cell style."],
+                    "style": "left"
+                },
+                [],
+                [
+                    "The",
+                    "default",
+                    "center",
+                    "style",
+                    "still",
+                    "applies."
+                ],
+                [], {
+                    "row": ["The file \"doc/styles\" displays all the default styles."],
+                    "style": "bold"
+                }
+            ],
+            "width": [
+                "15mm",
+                "2cm",
+                "1inch",
+                "3cm",
+                "4cm",
+                "2cm"
+            ]
+        }, {
+            "name": "Cell style",
+            "table": [
+                {
+                    "row": [
+                        "Apply",
+                        "some",
+                        "style",
+                        "at",
+                        "table,",
+                        "row",
+                        "and",
+                        "cell",
+                        "level."
+                    ],
+                    "style": "bold_center"
+                },
+                [
+                    1,
+                    0,
+                    3.14,
+                    12345,
+                    "2021-3-22",
+                    "abcd"
+                ],
+                [
+                    {
+                        "style": "bold_center_grid_06pt",
+                        "value": 1
+                    }, {
+                        "style": "decimal2_grid_06pt",
+                        "value": 0
+                    }, {
+                        "style": "cell_decimal3",
+                        "value": 3.14
+                    }, {
+                        "style": "integer_grid_06pt",
+                        "value": 12345
+                    }, {
+                        "style": "bold_center_bg_gray_grid_06pt",
+                        "value": "2021-3-22"
+                    }, {
+                        "style": "bold_right_bg_gray_grid_06pt",
+                        "value": "abcd"
+                    }
+                ],
+                [], {
+                    "row": ["When a style is applied at cell level, use the key \"style\", then the key \"value\" points to the cell content."],
+                    "style": "left"
+                }
+            ],
+            "width": [
+                "15mm",
+                "2cm",
+                "1inch",
+                "3cm",
+                "4cm",
+                "2cm"
+            ]
+        }, {
+            "name": "Custom style",
+            "table": [
+                {
+                    "row": [
+                        "Use", "custom", "styles."
+                    ],
+                    "style": "bold_center"
+                },
+                [
+                    1,
+                    0,
+                    3.14,
+                    12345,
+                    "2021-3-22",
+                    "abcd"
+                ],
+                [
+                    {
+                        "style": "bg_blue",
+                        "value": 1
+                    }, {
+                        "style": "decimal2_grid_06pt",
+                        "value": 0
+                    }, {
+                        "style": "bg_blue",
+                        "value": 3.14
+                    }, {
+                        "style": "integer_grid_06pt",
+                        "value": 12345
+                    }, {
+                        "style": "bg_yellow_grid06",
+                        "value": "2021-3-22"
+                    }, {
+                        "style": "bg_yellow_grid06",
+                        "value": "abcd"
+                    }
+                ],
+                [], {
+                    "row": ["Custom styles can be added at a document level, using the key \"styles\" and sub keys \"name\" and \"definition\"."],
+                    "style": "left"
+                }
+            ],
+            "width": [
+                "15mm",
+                "2cm",
+                "1inch",
+                "3cm",
+                "4cm",
+                "2cm"
+            ]
+        }, {
+            "name": "Spanned cells",
+            "span": [
+                [
+                    0, 1, 2, 2
+                ],
+                "A1:G1"
+            ],
+            "table": [
+                {
+                    "row": ["Define spanned cells."],
+                    "style": "bold_center"
+                },
+                [
+                    {
+                        "style": "bg_yellow_grid06",
+                        "value": "spanned"
+                    },
+                    null,
+                    null,
+                    12345,
+                    "2021-3-22",
+                    "abcd"
+                ],
+                [
+                    null,
+                    null,
+                    null, {
+                        "style": "integer_grid_06pt",
+                        "value": 12345
+                    }, {
+                        "style": "bg_yellow_grid06",
+                        "value": "2021-03-22"
+                    }, {
+                        "style": "bg_yellow_grid06",
+                        "value": "abcd"
+                    }
+                ],
+                [], {
+                    "row": ["Spanned cells can be defined in 2 ways:"],
+                    "style": "left"
+                }, {
+                    "row": [
+                        "", "- at tab level with key \"span\"."
+                    ],
+                    "style": "left"
+                }, {
+                    "row": [
+                        "", "Coordinate can use the (x0,y0,x1,y1) or \"C0R0:C1R1\" system."
+                    ],
+                    "style": "left"
+                }, {
+                    "row": [
+                        "", "Here we have spanned [0 , 1, 2, 2] and \"A1:G1\"."
+                    ],
+                    "style": "left"
+                },
+                [], {
+                    "row": [
+                        "", "- at cell level with keys \"colspanned\" and \"rowspanned\"."
+                    ],
+                    "style": "left"
+                }, {
+                    "row": [
+                        "", "At least one of them must be set with the number of rows or cells to cover."
+                    ],
+                    "style": "left"
+                }, {
+                    "row": [
+                        "", "Here we have spanned the cell below by 3 columnss and 2 rows:"
+                    ],
+                    "style": "left"
+                },
+                [
+                    "", {
+                        "value": "spanned",
+                        "colspanned": 3,
+                        "rowspanned": 2
+                    }
+                ]
+            ],
+            "width": [
+                "15mm",
+                "2cm",
+                "1inch",
+                "3cm",
+                "4cm",
+                "2cm"
+            ]
+        }
+    ],
+    "styles": [
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"> <style:table-cell-properties fo:background-color=\"#aaaaff\"/> <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/> </style:style>",
+            "name": "bg_blue"
+        }, {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"> <style:table-cell-properties fo:background-color=\"#fff9ae\" fo:border=\"0.06pt solid #000000\"/> <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/> </style:style>",
+            "name": "bg_yellow_grid06"
+        }
+    ]
+}

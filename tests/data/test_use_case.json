@@ -1,0 +1,4858 @@
+{
+    "body": [
+        {
+            "name": "Results",
+            "table": [
+                {
+                    "row": [
+                        {
+                            "value": "Surface id"
+                        },
+                        {
+                            "value": "Surface name"
+                        },
+                        {
+                            "value": "Surface layer"
+                        },
+                        {
+                            "value": "Surface area [m2]"
+                        },
+                        {
+                            "value": "Average value [h/day]"
+                        },
+                        {
+                            "value": "0h00",
+                            "style": "bld_cntr_22_43_253_gr"
+                        },
+                        {
+                            "value": "0h30",
+                            "style": "bld_cntr_22_80_253_gr"
+                        },
+                        {
+                            "value": "1h00",
+                            "style": "bld_cntr_22_117_253_gr"
+                        },
+                        {
+                            "value": "1h30",
+                            "style": "bld_cntr_22_155_254_gr"
+                        },
+                        {
+                            "value": "2h00",
+                            "style": "bld_cntr_21_193_254_gr"
+                        },
+                        {
+                            "value": "2h30",
+                            "style": "bld_cntr_21_231_254_gr"
+                        },
+                        {
+                            "value": "3h00",
+                            "style": "bld_cntr_21_254_207_gr"
+                        },
+                        {
+                            "value": "3h30",
+                            "style": "bld_cntr_20_254_92_gr"
+                        },
+                        {
+                            "value": "4h00",
+                            "style": "bld_cntr_85_254_20_gr"
+                        },
+                        {
+                            "value": "4h30",
+                            "style": "bld_cntr_210_254_19_gr"
+                        },
+                        {
+                            "value": "5h00",
+                            "style": "bld_cntr_252_254_19_gr"
+                        },
+                        {
+                            "value": "5h30",
+                            "style": "bld_cntr_255_216_19_gr"
+                        },
+                        {
+                            "value": "6h00",
+                            "style": "bld_cntr_255_174_18_gr"
+                        },
+                        {
+                            "value": "6h30",
+                            "style": "bld_cntr_255_133_18_gr"
+                        },
+                        {
+                            "value": "7h00",
+                            "style": "bld_cntr_255_91_17_gr"
+                        },
+                        {
+                            "value": "7h30",
+                            "style": "bld_cntr_255_49_17_gr"
+                        },
+                        {
+                            "value": "Grid"
+                        },
+                        {
+                            "value": "Comments"
+                        }
+                    ],
+                    "style": "bold_center_bg_gray_grid_06pt"
+                },
+                [
+                    {
+                        "value": 91155,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91155",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 10.260014,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.15,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 3.57,
+                        "text": "3.57",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 13.05,
+                        "text": "13.05",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 8.33,
+                        "text": "8.33",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 3.12,
+                        "text": "3.12",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 7.6,
+                        "text": "7.60",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 10.19,
+                        "text": "10.19",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 18.24,
+                        "text": "18.24",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 35.9,
+                        "text": "35.90",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91207,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91207",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "roof",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 11.040004,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 6.78,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91209,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91209",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "roof",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 13.440005,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 1.14,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91237,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91237",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 41.809799,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.73,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91296,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91296",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 10.26001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 1.81,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 24.95,
+                        "text": "24.95",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 25.92,
+                        "text": "25.92",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 13.2,
+                        "text": "13.20",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 3.12,
+                        "text": "3.12",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 12.11,
+                        "text": "12.11",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 18.38,
+                        "text": "18.38",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 2.32,
+                        "text": "2.32",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91307,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91307",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 0.84,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 2.05,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 50.0,
+                        "text": "50.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 30.95,
+                        "text": "30.95",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 19.05,
+                        "text": "19.05",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91309,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91309",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 0.84,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91312,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91312",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 2.819996,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91320,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91320",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 2.895199,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91322,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91322",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 4.716804,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91721,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91721",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 45.011037,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 6.75,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 91722,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "91722",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 45.011053,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 5.98,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 10.76,
+                        "text": "10.76",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.62,
+                        "text": "0.62",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 5.06,
+                        "text": "5.06",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 25.01,
+                        "text": "25.01",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 58.55,
+                        "text": "58.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 92341,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "92341",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 16.880011,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 6.75,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 92348,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "92348",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 2.401398,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 6.77,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 92393,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "92393",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 16.880013,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 6.77,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 92707,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "92707",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "roof",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 144.162479,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 7.68,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.5,
+                        "text": "0.50",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 1.16,
+                        "text": "1.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 1.09,
+                        "text": "1.09",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 1.58,
+                        "text": "1.58",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.78,
+                        "text": "0.78",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 1.68,
+                        "text": "1.68",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 5.9,
+                        "text": "5.90",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 87.32,
+                        "text": "87.32",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 92957,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "92957",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 4.148038,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.17,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 15.76,
+                        "text": "15.76",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 4.65,
+                        "text": "4.65",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 4.65,
+                        "text": "4.65",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 16.06,
+                        "text": "16.06",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 9.97,
+                        "text": "9.97",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 12.5,
+                        "text": "12.50",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 36.4,
+                        "text": "36.40",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 92958,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "92958",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "roof",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 3.360002,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 4.19,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 2.61,
+                        "text": "2.61",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 3.21,
+                        "text": "3.21",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 94.17,
+                        "text": "94.17",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106108,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106108",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 17.540013,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.52,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 48.92,
+                        "text": "48.92",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 51.08,
+                        "text": "51.08",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106528,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106528",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.08,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.05,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106529,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106529",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.08,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.06,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106530,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106530",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.06,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106544,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106544",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080002,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.06,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106545,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106545",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.05,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106546,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106546",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080002,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.06,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106547,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106547",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.08,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.06,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106548,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106548",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.5,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.12,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106549,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106549",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.08,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.05,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106550,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106550",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.500001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.12,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106551,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106551",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.06,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106552,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106552",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.06,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106553,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106553",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.06,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106554,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106554",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.05,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106555,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106555",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.080001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 3.05,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 21.64,
+                        "text": "21.64",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 27.55,
+                        "text": "27.55",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106558,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106558",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.5,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 2.61,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 20.54,
+                        "text": "20.54",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 50.29,
+                        "text": "50.29",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106559,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106559",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.5,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 1.68,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 29.16,
+                        "text": "29.16",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 20.54,
+                        "text": "20.54",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 38.21,
+                        "text": "38.21",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 12.08,
+                        "text": "12.08",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106560,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106560",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.5,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.12,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106561,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106561",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.500001,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.12,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106562,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106562",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "glazing",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 1.500002,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.04,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 100.0,
+                        "text": "100.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ],
+                [
+                    {
+                        "value": 106612,
+                        "style": "integer_grid_06pt"
+                    },
+                    {
+                        "value": "106612",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "wall façade",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": 41.800048,
+                        "style": "decimal6_grid_06pt"
+                    },
+                    {
+                        "value": 0.89,
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 69.14,
+                        "text": "69.14",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 30.86,
+                        "text": "30.86",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": 0.0,
+                        "text": "0.00",
+                        "style": "decimal2_grid_06pt"
+                    },
+                    {
+                        "value": "very detailed (approx 4 sensors per m²)",
+                        "style": "grid_06pt"
+                    },
+                    {
+                        "value": "",
+                        "style": "grid_06pt"
+                    }
+                ]
+            ],
+            "style": "grid_06pt",
+            "width": [
+                "2cm",
+                "4cm",
+                "4cm",
+                "4cm",
+                "4cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "2.2cm",
+                "4cm",
+                "8cm"
+            ]
+        },
+        {
+            "name": "Scale",
+            "table": [
+                {
+                    "row": ["Threshold", "Color", "Tint"],
+                    "style": "bold_center"
+                },
+                [
+                    {
+                        "value": 0.0
+                    },
+                    {
+                        "value": "#162BFD"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_22_43_253"
+                    }
+                ],
+                [
+                    {
+                        "value": 0.5
+                    },
+                    {
+                        "value": "#1650FD"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_22_80_253"
+                    }
+                ],
+                [
+                    {
+                        "value": 1.0
+                    },
+                    {
+                        "value": "#1675FD"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_22_117_253"
+                    }
+                ],
+                [
+                    {
+                        "value": 1.5
+                    },
+                    {
+                        "value": "#169BFE"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_22_155_254"
+                    }
+                ],
+                [
+                    {
+                        "value": 2.0
+                    },
+                    {
+                        "value": "#15C1FE"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_21_193_254"
+                    }
+                ],
+                [
+                    {
+                        "value": 2.5
+                    },
+                    {
+                        "value": "#15E7FE"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_21_231_254"
+                    }
+                ],
+                [
+                    {
+                        "value": 3.0
+                    },
+                    {
+                        "value": "#15FECF"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_21_254_207"
+                    }
+                ],
+                [
+                    {
+                        "value": 3.5
+                    },
+                    {
+                        "value": "#14FE5C"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_20_254_92"
+                    }
+                ],
+                [
+                    {
+                        "value": 4.0
+                    },
+                    {
+                        "value": "#55FE14"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_85_254_20"
+                    }
+                ],
+                [
+                    {
+                        "value": 4.5
+                    },
+                    {
+                        "value": "#D2FE13"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_210_254_19"
+                    }
+                ],
+                [
+                    {
+                        "value": 5.0
+                    },
+                    {
+                        "value": "#FCFE13"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_252_254_19"
+                    }
+                ],
+                [
+                    {
+                        "value": 5.5
+                    },
+                    {
+                        "value": "#FFD813"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_255_216_19"
+                    }
+                ],
+                [
+                    {
+                        "value": 6.0
+                    },
+                    {
+                        "value": "#FFAE12"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_255_174_18"
+                    }
+                ],
+                [
+                    {
+                        "value": 6.5
+                    },
+                    {
+                        "value": "#FF8512"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_255_133_18"
+                    }
+                ],
+                [
+                    {
+                        "value": 7.0
+                    },
+                    {
+                        "value": "#FF5B11"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_255_91_17"
+                    }
+                ],
+                [
+                    {
+                        "value": 7.5
+                    },
+                    {
+                        "value": "#FF3111"
+                    },
+                    {
+                        "value": "",
+                        "style": "bg_255_49_17"
+                    }
+                ]
+            ],
+            "style": "",
+            "width": ["4cm", "4cm", "4cm"]
+        }
+    ],
+    "styles": [
+        {
+            "name": "bld_cntr_22_43_253_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#162BFD\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#FFFFFF\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_22_80_253_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#1650FD\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#FFFFFF\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_22_117_253_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#1675FD\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_22_155_254_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#169BFE\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_21_193_254_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#15C1FE\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_21_231_254_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#15E7FE\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_21_254_207_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#15FECF\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_20_254_92_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#14FE5C\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#FFFFFF\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_85_254_20_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#55FE14\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#FFFFFF\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_210_254_19_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#D2FE13\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_252_254_19_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#FCFE13\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_255_216_19_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#FFD813\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_255_174_18_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#FFAE12\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_255_133_18_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#FF8512\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#000000\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_255_91_17_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#FF5B11\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#FFFFFF\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bld_cntr_255_49_17_gr",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\" fo:background-color=\"#FF3111\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/><style:text-properties fo:color=\"#FFFFFF\"/><style:paragraph-properties fo:text-align=\"center\"/></style:style>"
+        },
+        {
+            "name": "bg_22_43_253",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#162BFD\"/><style:text-properties fo:color=\"#FFFFFF\"/></style:style>"
+        },
+        {
+            "name": "bg_22_80_253",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#1650FD\"/><style:text-properties fo:color=\"#FFFFFF\"/></style:style>"
+        },
+        {
+            "name": "bg_22_117_253",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#1675FD\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_22_155_254",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#169BFE\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_21_193_254",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#15C1FE\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_21_231_254",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#15E7FE\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_21_254_207",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#15FECF\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_20_254_92",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#14FE5C\"/><style:text-properties fo:color=\"#FFFFFF\"/></style:style>"
+        },
+        {
+            "name": "bg_85_254_20",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#55FE14\"/><style:text-properties fo:color=\"#FFFFFF\"/></style:style>"
+        },
+        {
+            "name": "bg_210_254_19",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#D2FE13\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_252_254_19",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#FCFE13\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_255_216_19",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#FFD813\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_255_174_18",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#FFAE12\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_255_133_18",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#FF8512\"/><style:text-properties fo:color=\"#000000\"/></style:style>"
+        },
+        {
+            "name": "bg_255_91_17",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#FF5B11\"/><style:text-properties fo:color=\"#FFFFFF\"/></style:style>"
+        },
+        {
+            "name": "bg_255_49_17",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\"><style:table-cell-properties fo:background-color=\"#FF3111\"/><style:text-properties fo:color=\"#FFFFFF\"/></style:style>"
+        }
+    ]
+}

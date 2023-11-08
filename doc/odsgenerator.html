@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>odsgenerator 1.8.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=06226de3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="odsgenerator-an-ods-generator">
+<h1>odsgenerator, an .ods generator.<a class="headerlink" href="#odsgenerator-an-ods-generator" title="Link to this heading">¶</a></h1>
+<p>Generate an OpenDocument Format <code class="docutils literal notranslate"><span class="pre">.ods</span></code> file from a <code class="docutils literal notranslate"><span class="pre">.json</span></code> or <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> file.</p>
+<p>When used as a script, <code class="docutils literal notranslate"><span class="pre">odsgenerator</span></code> parses a JSON or YAML description of
+tables and generates an ODF document using the <code class="docutils literal notranslate"><span class="pre">odfdo</span></code> library.</p>
+<p>When used as a library, <code class="docutils literal notranslate"><span class="pre">odsgenerator</span></code> parses a Python description of tables
+and returns the ODF content as bytes (ready to be saved as a valid ODF document).</p>
+<ul class="simple">
+<li><p>The content description can be minimalist: a list of lists of lists,</p></li>
+<li><p>or description can be complex, allowing styles at row or cell level.</p></li>
+</ul>
+<p>See also https://github.com/jdum/odsparsator which is doing the reverse
+operation, <code class="docutils literal notranslate"><span class="pre">.osd</span></code> to <code class="docutils literal notranslate"><span class="pre">.json</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">odsgenerator</span></code> is a <code class="docutils literal notranslate"><span class="pre">Python3</span></code> package, using the <a class="reference external" href="https://github.com/jdum/odfdo">odfdo</a> library. Current version requires Python &gt;= 3.9, see prior versions for older environments.</p>
+<p>Project:
+https://github.com/jdum/odsgenerator</p>
+<p>Author:
+jerome.dumonteil&#64;gmail.com</p>
+<p>License:
+MIT</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>Installation from Pypi (recommended):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">odsgenerator</span>
+</pre></div>
+</div>
+<p>Installation from sources (requiring setuptools):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="cli-usage">
+<h2>CLI usage<a class="headerlink" href="#cli-usage" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">odsgenerator</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="n">input_file</span> <span class="n">output_file</span>
+</pre></div>
+</div>
+<section id="arguments">
+<h3>arguments<a class="headerlink" href="#arguments" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">input_file</span></code>: input file containing data in JSON or YAML format</p>
+<p><code class="docutils literal notranslate"><span class="pre">output_file</span></code>: output file, <code class="docutils literal notranslate"><span class="pre">.ods</span></code> file generated from the input</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">odsgenerator</span> <span class="pre">--help</span></code> for more details about input file parameters
+and look at examples in the tests folder.</p>
+</section>
+</section>
+<section id="usage-from-python-code">
+<h2>Usage from python code<a class="headerlink" href="#usage-from-python-code" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">odsgenerator</span>
+
+<span class="n">content</span> <span class="o">=</span> <span class="n">odsgenerator</span><span class="o">.</span><span class="n">ods_bytes</span><span class="p">([[[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]]])</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sample.ods&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The resulting <code class="docutils literal notranslate"><span class="pre">.ods</span></code> file loaded in a spreadsheet:</p>
+<p><img alt="spreadsheet screnshot" src="https://raw.githubusercontent.com/jdum/odsgenerator/main/doc/sample1_ods.png" /></p>
+<p>Another example with more parameters:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">odsgenerator</span>
+
+<span class="n">content</span> <span class="o">=</span> <span class="n">odsgenerator</span><span class="o">.</span><span class="n">ods_bytes</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;first tab&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;cell_decimal2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;table&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;row&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;bold_center_bg_gray_grid_06pt&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+            <span class="p">],</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sample2.ods&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.ods</span></code> file loaded in a spreadsheet, with gray background on first line:</p>
+<p><img alt="spreadsheet screnshot" src="https://raw.githubusercontent.com/jdum/odsgenerator/main/doc/sample2_ods.png" /></p>
+</section>
+<section id="tutorial-example">
+<h2>Tutorial example<a class="headerlink" href="#tutorial-example" title="Link to this heading">¶</a></h2>
+<p>The doc folder contains:</p>
+<ul class="simple">
+<li><p>A tutorial model, see <code class="docutils literal notranslate"><span class="pre">tutorial.json</span></code> or  <code class="docutils literal notranslate"><span class="pre">tutorial.yml</span></code> and resulting <code class="docutils literal notranslate"><span class="pre">tutorial.ods</span></code>,</p></li>
+<li><p>a showcase of the default styles: : <code class="docutils literal notranslate"><span class="pre">styles.json</span></code> and resulting <code class="docutils literal notranslate"><span class="pre">styles.ods</span></code>.</p></li>
+</ul>
+</section>
+<section id="principle">
+<h2>Principle<a class="headerlink" href="#principle" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>A document is a list or dict containing tabs,</p></li>
+<li><p>a tab is a list or dict containing rows,</p></li>
+<li><p>a row is a list or dict containing cells.</p></li>
+</ul>
+<p>A <strong>cell</strong> can be:</p>
+<ul class="simple">
+<li><p>int, float or str,</p></li>
+<li><p>a dict, with the following keys (only the ‘value’ key is mandatory):</p>
+<ul>
+<li><p>value: int, float or str,</p></li>
+<li><p>style: str or list of str, a style name or a list of style names,</p></li>
+<li><p>text: str, a string representation of the value (for ODF readers
+who use it),</p></li>
+<li><p>formula: str, content of the ‘table:formula’ attribute, some “of:”
+OpenFormula string,</p></li>
+<li><p>colspanned: int, the number of spanned columns,</p></li>
+<li><p>rowspanned: int, the number of spanned rows.</p></li>
+</ul>
+</li>
+</ul>
+<p>A <strong>row</strong> can be:</p>
+<ul class="simple">
+<li><p>a list of cells,</p></li>
+<li><p>a dict, with the following keys (only the ‘row’ key is mandatory):</p>
+<ul>
+<li><p>row: a list of cells, see above,</p></li>
+<li><p>style: str or list of str, a style name or a list of style names.</p></li>
+</ul>
+</li>
+</ul>
+<p>A <strong>tab</strong> can be:</p>
+<ul class="simple">
+<li><p>a list of rows,</p></li>
+<li><p>a dict, with the following keys (only the ‘table’ key is mandatory):</p>
+<ul>
+<li><p>table: a list of rows,</p></li>
+<li><p>width: a list containing the width of each column of the table</p></li>
+<li><p>name: str, the name of the tab,</p></li>
+<li><p>style: str or list of str, a style name or a list of style names.</p></li>
+</ul>
+</li>
+</ul>
+<p>A tab may have some post transformation:</p>
+<ul class="simple">
+<li><p>a list of span areas, cell coordinates are defined in the tab after
+its creation using odfo method Table.set_span(), with either
+coordiante system: “A1:B3” or [0, 0, 2, 1].</p></li>
+</ul>
+<p>A <strong>document</strong> can be:</p>
+<ul class="simple">
+<li><p>a list of tabs,</p></li>
+<li><p>a dict, with the following keys (only the ‘body’ key is mandatory):</p>
+<ul>
+<li><p>body: a list of tabs,</p></li>
+<li><p>styles: a list of dict of styles definitions,</p></li>
+<li><p>defaults: a dict, for the defaults styles.</p></li>
+</ul>
+</li>
+</ul>
+<p>A <strong>style</strong> definition is a dict with 2 items:</p>
+<ul class="simple">
+<li><p>the name of the style (optional, if not present the attribute
+style:name of the definition is used),</p></li>
+<li><p>an XML definition of the ODF style, see list below.</p></li>
+</ul>
+<p>The styles provided for a row or a table can be of family table-row or
+table-cell, they apply to row and below cells. A style defined at a
+lower level (cell for instance) has priority over the style defined above
+(row for instance).</p>
+<p>In short, if you don’t need custom styles, this is a valid document
+description:</p>
+<p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">[</span> <span class="pre">[&quot;a&quot;,</span> <span class="pre">&quot;b&quot;,</span> <span class="pre">&quot;c&quot;</span> <span class="pre">]</span> <span class="pre">]</span> <span class="pre">]</span></code></p>
+<p>This list will create a document with only one tab (name will be “Tab 1”
+by default), containing one row of 3 values “a”, “b”, “c”.</p>
+</section>
+<section id="styles">
+<h2>Styles<a class="headerlink" href="#styles" title="Link to this heading">¶</a></h2>
+<p>Styles are XML strings of OpenDocument styles. They can be extracted from the
+content.xml part of an existing <code class="docutils literal notranslate"><span class="pre">.ods</span></code> document.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">DEFAULT_STYLES</span></code> constant defines styles always available, they can be
+called by their name for cells or rows.</p></li>
+<li><p>To add a custom style, use the “styles” category of the document dict. A
+style is a dict with 2 keys, “definition” and “name”.</p></li>
+</ul>
+</section>
+<section id="list-of-provided-styles">
+<h2>List of provided styles<a class="headerlink" href="#list-of-provided-styles" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">grid_06pt</span></code> means that the cell is surrounded by a black border of 0.6
+point,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gray</span></code> means that the cell has a gray background.</p></li>
+<li><p>The file <code class="docutils literal notranslate"><span class="pre">doc/styles.ods</span></code> displays all the provided styles.</p></li>
+</ul>
+<p><strong>Row styles:</strong></p>
+<ul class="simple">
+<li><p>default_table_row</p></li>
+<li><p>table_row_1cm</p></li>
+</ul>
+<p><strong>Cell styles:</strong></p>
+<ul class="simple">
+<li><p>bold</p></li>
+<li><p>bold_center</p></li>
+<li><p>left</p></li>
+<li><p>right</p></li>
+<li><p>center</p></li>
+<li><p>cell_decimal1</p></li>
+<li><p>cell_decimal2</p></li>
+<li><p>cell_decimal3</p></li>
+<li><p>cell_decimal4</p></li>
+<li><p>cell_decimal6</p></li>
+<li><p>grid_06pt</p></li>
+<li><p>bold_left_bg_gray_grid_06pt</p></li>
+<li><p>bold_right_bg_gray_grid_06pt</p></li>
+<li><p>bold_center_bg_gray_grid_06pt</p></li>
+<li><p>bold_left_grid_06pt</p></li>
+<li><p>bold_right_grid_06pt</p></li>
+<li><p>bold_center_grid_06pt</p></li>
+<li><p>left_grid_06pt</p></li>
+<li><p>right_grid_06pt</p></li>
+<li><p>center_grid_06pt</p></li>
+<li><p>integer_grid_06pt</p></li>
+<li><p>integer_no_zero_grid_06pt</p></li>
+<li><p>center_integer_no_zero_grid_06pt</p></li>
+<li><p>decimal1_grid_06pt</p></li>
+<li><p>decimal2_grid_06pt</p></li>
+<li><p>decimal3_grid_06pt</p></li>
+<li><p>decimal4_grid_06pt</p></li>
+<li><p>decimal6_grid_06pt</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">odsgenerator</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021-2023, Jérôme Dumonteil.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

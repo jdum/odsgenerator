@@ -1,0 +1,32 @@
+{
+    "body": [
+        {
+            "name": "test",
+            "table": [
+                {
+                    "row": [
+                        {
+                            "value": "formula test"
+                        }
+                    ]
+                },
+                {
+                    "row": ["a", 10]
+                },
+                {
+                    "row": ["b", 20]
+                },
+                {
+                    "row": [
+                        "a+b",
+                        {
+                            "value": 30,
+                            "formula": "of:=[.B3]+[.B2]"
+                        }
+                    ]
+                }
+            ],
+            "width": ["22.58mm", "22.58mm"]
+        }
+    ]
+}

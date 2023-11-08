@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# Copyright 2021 Jérôme Dumonteil
+# Copyright 2021-2023 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
 """Generate an OpenDocument Format .ods file from json or yaml file.
@@ -179,18 +178,16 @@ Cell styles:
     - decimal6_grid_06pt
 """
 
-import sys
-import argparse
 import io
+import sys
 
 try:
     import yaml
-except ModuleNotFoundError:
+except ModuleNotFoundError:  # pragma: no cover
     import json
-import odfdo
-from odfdo import Document, Table, Row, Cell, Element
+from odfdo import Cell, Document, Element, Row, Table
 
-__version__ = "1.5.0"
+__version__ = "1.8.0"
 
 DEFAULT_STYLES = [
     {
@@ -689,9 +686,9 @@ class ODSGenerator:
         """
         if not styles:
             return
-        for s in styles:
-            name = s.get(NAME)
-            definition = s.get(DEFINITION)
+        for style_item in styles:
+            name = style_item.get(NAME)
+            definition = style_item.get(DEFINITION)
             style = Element.from_tag(definition)
             if name:
                 style.name = name
@@ -708,9 +705,9 @@ class ODSGenerator:
             self.doc.insert_style(style, automatic=automatic)
             self.used_styles.add(name)
             # add style dependacies
-            for k, v in style.attributes.items():
-                if k.endswith("style-name"):
-                    self.insert_style(v)
+            for key, value in style.attributes.items():
+                if key.endswith("style-name"):
+                    self.insert_style(value)
 
     def guess_style(self, opt, family, default):
         """Guess which style to apply.
@@ -803,9 +800,7 @@ class ODSGenerator:
         value, opt = self.split(cell_content, VALUE)
         if style_table_cell:
             default = style_table_cell
-        elif value is None:
-            default = self.defaults["style_str"]
-        elif isinstance(value, str):
+        elif value is None or isinstance(value, str):
             default = self.defaults["style_str"]
         elif isinstance(value, int):
             default = self.defaults["style_int"]
@@ -820,8 +815,8 @@ class ODSGenerator:
         )
         attr = opt.get("attr")
         if attr:
-            for k, v in attr.items():
-                cell.set_attribute(k, v)
+            for key, value in attr.items():
+                cell.set_attribute(key, value)
         cell = row.append(cell)
         if COLSPAN in opt or ROWSPAN in opt:
             self.store_spanned_cell(cell, opt)
@@ -892,8 +887,8 @@ def content_to_ods(content, output_path):
         content (list or dict): Input description of tables.
         output_path (str or Path or BytesIO): Path of the ODF output file.
     """
-    doc = ODSGenerator(content)
-    doc.save(output_path)
+    document = ODSGenerator(content)
+    document.save(output_path)
 
 
 def file_to_ods(input_path, output_path):
@@ -906,11 +901,11 @@ def file_to_ods(input_path, output_path):
         output_path (str or Path or BytesIO): Path of the ODF output file.
     """
     if "yaml" in sys.modules:
-        with open(input_path, mode="r", encoding="utf8") as f:
-            content = yaml.load(f, yaml.SafeLoader)
+        with open(input_path, encoding="utf8") as file:
+            content = yaml.load(file, yaml.SafeLoader)
     else:  # fall back to json
-        with open(input_path, mode="r", encoding="utf8") as f:
-            content = json.load(f)
+        with open(input_path, encoding="utf8") as file:
+            content = json.load(file)
     content_to_ods(content, output_path)
 
 
@@ -933,53 +928,7 @@ def ods_bytes(content):
     Returns:
         bytes: Zipped OpenDocument format.
     """
-    with io.BytesIO() as b:
-        doc = ODSGenerator(content)
-        doc.save(b)
-        return b.getvalue()
-
-
-def check_odfdo_version():
-    """Utility to verify we have the minimal version of the odfdo library."""
-    if tuple(int(x) for x in odfdo.__version__.split(".")) > (3, 3, 0):
-        return True
-    print("Error: I need odfdo version >= 3.3.0")
-    return False
-
-
-def main():
-    """Read parameters from STDIN and apply the required command.
-
-    Usage:
-       odsgenerator [-h] [--version] input_file output_file
-
-    Arguments:
-        input_file: Input file containing data in json or yaml format.
-
-        output_file: Output file, .ods file generated from input.
-
-    Use `odsgenerator --help` for more details about input file parameters
-    and look at examples in the tests folder.
-    """
-    if not check_odfdo_version():
-        sys.exit(1)
-    parser = argparse.ArgumentParser(
-        description="odsgenerator, an .ods generator.",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=__doc__,
-    )
-    parser.add_argument(
-        "--version", action="version", version="%(prog)s " + __version__
-    )
-    parser.add_argument(
-        "input_file", help="input file containing data in json or yaml format"
-    )
-    parser.add_argument(
-        "output_file", help="output file, .ods file generated from input"
-    )
-    args = parser.parse_args()
-    file_to_ods(args.input_file, args.output_file)
-
-
-if __name__ == "__main__":
-    main()
+    with io.BytesIO() as iobytes:
+        document = ODSGenerator(content)
+        document.save(iobytes)
+        return iobytes.getvalue()
