@@ -1,4 +1,4 @@
-# Copyright 2021-2023 Jérôme Dumonteil
+# Copyright 2021-2024 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
 """Generate an OpenDocument Format .ods file from json or yaml file.
@@ -181,13 +181,15 @@ Cell styles:
 import io
 import sys
 
-try:
+try:  # noqa: SIM105
     import yaml
 except ModuleNotFoundError:  # pragma: no cover
-    import json
+    pass
+import json
+
 from odfdo import Cell, Document, Element, Row, Table
 
-__version__ = "1.8.0"
+__version__ = "1.9.0"
 
 DEFAULT_STYLES = [
     {

@@ -1,4 +1,4 @@
-# Copyright 2021-2023 Jérôme Dumonteil
+# Copyright 2021-2024 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
 """CLI interface to odsgenerator.
@@ -11,12 +11,17 @@ import odfdo
 
 from odsgenerator.odsgenerator import __doc__, __version__, file_to_ods
 
+ODFDO_REQUIREMENT = (3, 5, 0)
+
 
 def check_odfdo_version():
     """Utility to verify we have the minimal version of the odfdo library."""
-    if tuple(int(x) for x in odfdo.__version__.split(".")) > (3, 3, 0):
+    if tuple(int(x) for x in odfdo.__version__.split(".")) >= ODFDO_REQUIREMENT:
         return True
-    print("Error: odfdo version >= 3.3.0 is required")  # pragma: no cover
+    print(  # pragma: no cover
+        "Error: odfdo version >= "
+        f"{'.'.join(str(x) for x in ODFDO_REQUIREMENT)} is required"
+    )
     return False  # pragma: no cover
 
 

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "odsgenerator"
-version = "1.8.0"
+version = "1.9.0"
 description = "Generate an OpenDocument Format .ods file from json or yaml file"
 license = "MIT"
 keywords = ["openDocument", "ODF", "ods", "json", "spreadsheet", "generator"]
@@ -30,8 +30,7 @@ odsgenerator = "odsgenerator.cli:main"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4"
-odfdo = ">=3.4"
-lxml = "^4.0"
+odfdo = ">=3.5"
 pyyaml = ">=5.0"
 
 [tool.poetry.group.docs.dependencies]
@@ -43,12 +42,12 @@ poetry = ">=1.6"
 pytest = ">=7.0"
 tox = "^4"
 ruff = ">=0.1"
-black = ">=22.0"
+black = ">=24.0"
 isort = ">=5.0"
 coverage = ">=7.0"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.6.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]

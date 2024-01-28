@@ -18,7 +18,7 @@ from odsgenerator import odsgenerator
 # -- Project information -----------------------------------------------------
 
 project = "odsgenerator"
-copyright = "2021-2023, Jérôme Dumonteil"  # noqa: A001
+copyright = "2021-2024, Jérôme Dumonteil"  # noqa: A001
 author = "Jérôme Dumonteil"
 
 # The short X.Y version
