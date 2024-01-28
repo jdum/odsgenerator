@@ -1,4 +1,4 @@
-# odsgenerator, an .ods generator.
+# odsgenerator, a .ods generator.
 
 Generate an OpenDocument Format `.ods` file from a `.json` or `.yaml` file.
 
@@ -51,9 +51,9 @@ odsgenerator [-h] [--version] input_file output_file
 ### arguments
 
 
-``input_file``: input file containing data in JSON or YAML format
+`input_file`: input file containing data in JSON or YAML format
 
-``output_file``: output file, `.ods` file generated from the input
+`output_file`: output file, `.ods` file generated from the input
 
 Use ``odsgenerator --help`` for more details about input file parameters
 and look at examples in the tests folder.
@@ -111,10 +111,10 @@ The `.ods` file loaded in a spreadsheet, with gray background on first line:
 
 ## Documentation
 
-See in the `./docL folder:
+See in the `./doc folder:
 
--  ``html/odsgenerator.html``
--  ``tutorial.json`` or ``tutorial.yml`` and ``tutorial.ods``
+-  `html/odsgenerator.html`
+-  `tutorial.json` or `tutorial.yml` and `tutorial.ods`
 
 
 ## License
