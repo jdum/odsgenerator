@@ -62,7 +62,7 @@ and look at examples in the tests folder.
 ## Usage from python code
 
 ```python
-import odsgenerator
+from odsgenerator import odsgenerator
 
 content = odsgenerator.ods_bytes([[["a", "b", "c"], [10, 20, 30]]])
 with open("sample.ods", "wb") as file:
