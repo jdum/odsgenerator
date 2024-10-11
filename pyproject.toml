@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "odsgenerator"
-version = "1.11.0"
+version = "1.11.1"
 description = "Generate an OpenDocument Format .ods file from json or yaml file"
 license = "MIT"
 keywords = ["openDocument", "ODF", "ods", "json", "spreadsheet", "generator"]
@@ -16,6 +16,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Operating System :: OS Independent",
     "Topic :: Text Processing",
     "Topic :: Software Development :: Libraries :: Python Modules",
@@ -42,7 +43,7 @@ myst-parser = ">=2.0.0"
 poetry = "~1.8"
 pytest = ">=8.0"
 tox = ">=4"
-ruff = ">=0.5.0"
+ruff = ">=0.6.0"
 isort = ">=5.13.0"
 coverage = ">=7.0"
 
