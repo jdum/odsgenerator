@@ -1,15 +1,15 @@
 # Copyright 2021-2024 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
-"""CLI interface to odsgenerator.
-"""
+"""CLI interface to odsgenerator."""
 
 import argparse
 import sys
 
 import odfdo
 
-from odsgenerator.odsgenerator import __doc__, __version__, file_to_ods
+from odsgenerator.odsgenerator import __doc__ as og_doc
+from odsgenerator.odsgenerator import __version__, file_to_ods
 
 ODFDO_REQUIREMENT = (3, 5, 0)
 
@@ -44,7 +44,7 @@ def main():  # pragma: no cover
     parser = argparse.ArgumentParser(
         description="odsgenerator, an .ods generator.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=__doc__,
+        epilog=og_doc,
     )
     parser.add_argument(
         "--version", action="version", version="%(prog)s " + __version__
