@@ -11,10 +11,10 @@ import odfdo
 from odsgenerator.odsgenerator import __doc__ as og_doc
 from odsgenerator.odsgenerator import __version__, file_to_ods
 
-ODFDO_REQUIREMENT = (3, 5, 0)
+ODFDO_REQUIREMENT = (3, 7, 7)
 
 
-def check_odfdo_version():
+def check_odfdo_version() -> bool:
     """Utility to verify we have the minimal version of the odfdo library."""
     if tuple(int(x) for x in odfdo.__version__.split(".")) >= ODFDO_REQUIREMENT:
         return True
@@ -25,7 +25,7 @@ def check_odfdo_version():
     return False  # pragma: no cover
 
 
-def main():  # pragma: no cover
+def main() -> None:  # pragma: no cover
     """Read parameters from STDIN and apply the required command.
 
     Usage:

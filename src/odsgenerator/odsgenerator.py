@@ -178,8 +178,12 @@ Cell styles:
     - decimal6_grid_06pt
 """
 
+from __future__ import annotations
+
 import io
 import sys
+from pathlib import Path
+from typing import Any
 
 try:  # noqa: SIM105
     import yaml
@@ -189,7 +193,7 @@ import json
 
 from odfdo import Cell, Document, Element, Row, Table
 
-__version__ = "1.11.2"
+__version__ = "1.11.3"
 
 DEFAULT_STYLES = [
     {
@@ -661,7 +665,7 @@ class ODSGenerator:
         content (list or dict): Description of tables.
     """
 
-    def __init__(self, content):
+    def __init__(self, content: list[Any] | dict[str, Any]) -> None:
         self.doc = Document("spreadsheet")
         self.doc.body.clear()
         self.tab_counter = 0
@@ -671,7 +675,7 @@ class ODSGenerator:
         self.spanned_cells = []
         self.parse(content)
 
-    def save(self, path):
+    def save(self, path: str | Path) -> None:
         """Save the resulting ODF document.
 
         Args:
@@ -679,7 +683,7 @@ class ODSGenerator:
         """
         self.doc.save(path)
 
-    def parse_styles(self, styles, insert=False):
+    def parse_styles(self, styles: list[dict[str, str]], insert: bool = False) -> None:
         """Load available styles, either from default and the input description.
 
         Args:
@@ -700,7 +704,7 @@ class ODSGenerator:
             if insert:
                 self.insert_style(name)
 
-    def insert_style(self, name, automatic=True):
+    def insert_style(self, name: str, automatic: bool = True) -> None:
         """Insert the named style into the ODF document."""
         if name and name not in self.used_styles and name in self.styles_elements:
             style = self.styles_elements[name]
@@ -711,7 +715,7 @@ class ODSGenerator:
                 if key.endswith("style-name"):
                     self.insert_style(value)
 
-    def guess_style(self, opt, family, default):
+    def guess_style(self, opt: dict[str, Any], family: str, default: str) -> str:
         """Guess which style to apply.
 
         Search list of styles under the "style" key, check against family of
@@ -737,10 +741,10 @@ class ODSGenerator:
             style = self.styles_elements.get(default)
             if style and style.family == family:
                 return default
-        return None
+        return ""
 
     @staticmethod
-    def split(item, key):
+    def split(item: Any, key: str) -> tuple[Any, dict[str, Any]]:
         """Extract the value of the key if item is a dict.
 
         If item is a dict, pop the value from the key, else consider that item
@@ -759,7 +763,7 @@ class ODSGenerator:
         # item can be list or value, or None
         return (item, {})
 
-    def parse(self, content):
+    def parse(self, content: list[Any] | dict[str, Any]) -> None:
         """Parse the top level of the input description."""
         body, opt = self.split(content, BODY)
         self.defaults.update(opt.get(DEFAULTS, {}))
@@ -768,7 +772,7 @@ class ODSGenerator:
         for table_content in body:
             self.parse_table(table_content)
 
-    def parse_table(self, table_content):
+    def parse_table(self, table_content: Any) -> None:
         """Parse a table level from the input description."""
         rows, opt = self.split(table_content, TABLE)
         self.tab_counter += 1
@@ -786,7 +790,13 @@ class ODSGenerator:
         self.parse_spanned(table, opt)
         self.doc.body.append(table)
 
-    def parse_row(self, table, row_content, style_table_row, style_table_cell):
+    def parse_row(
+        self,
+        table: Table,
+        row_content: Any,
+        style_table_row: str,
+        style_table_cell: str,
+    ) -> None:
         """Parse a row level from the input description."""
         cells, opt = self.split(row_content, ROW)
         style_table_row = self.guess_style(opt, "table-row", style_table_row)
@@ -797,7 +807,7 @@ class ODSGenerator:
         for cell_content in cells:
             self.parse_cell(row, cell_content, style_table_cell)
 
-    def parse_cell(self, row, cell_content, style_table_cell):
+    def parse_cell(self, row: Row, cell_content: Any, style_table_cell: str) -> None:
         """Parse a cell level from the input description."""
         value, opt = self.split(cell_content, VALUE)
         if style_table_cell:
@@ -823,7 +833,7 @@ class ODSGenerator:
         if COLSPAN in opt or ROWSPAN in opt:
             self.store_spanned_cell(cell, opt)
 
-    def column_width_style(self, width):
+    def column_width_style(self, width: str) -> str:
         """Generate an ODF style for a column width.
 
         Args:
@@ -844,7 +854,7 @@ class ODSGenerator:
             automatic=True,
         )
 
-    def parse_width(self, table, opt):
+    def parse_width(self, table: Table, opt: dict[str, Any]) -> None:
         """Parse the width tag of the input description."""
         width_opt = opt.get(WIDTH)
         if not width_opt:
@@ -860,7 +870,7 @@ class ODSGenerator:
             column.style = self.column_width_style(width_opt)
             table.set_column(position, column)
 
-    def parse_spanned(self, table, opt):
+    def parse_spanned(self, table: Table, opt: dict[str, Any]) -> None:
         """Parse the span tag of the input description."""
         span_opt = opt.get(SPAN)
         if span_opt:
@@ -872,7 +882,7 @@ class ODSGenerator:
         for area in span_opt:
             table.set_span(area)
 
-    def store_spanned_cell(self, cell, opt):
+    def store_spanned_cell(self, cell: Cell, opt: dict[str, Any]) -> None:
         colspan = max(1, int(opt.get(COLSPAN, 1)))
         rowspan = max(1, int(opt.get(ROWSPAN, 1)))
         if colspan < 2 and rowspan < 2:
@@ -882,7 +892,9 @@ class ODSGenerator:
         )
 
 
-def content_to_ods(content, output_path):
+def content_to_ods(
+    content: list[Any] | dict[str, Any], output_path: str | Path
+) -> None:
     """Parse document description and save resulting ODF to file.
 
     Args:
@@ -893,7 +905,7 @@ def content_to_ods(content, output_path):
     document.save(output_path)
 
 
-def file_to_ods(input_path, output_path):
+def file_to_ods(input_path: str, output_path: str | Path) -> None:
     """Parse the input file and save resulting ODF to file.
 
     The input file can be JSON or other YAML format.
@@ -911,7 +923,7 @@ def file_to_ods(input_path, output_path):
     content_to_ods(content, output_path)
 
 
-def ods_bytes(content):
+def ods_bytes(content: list[Any] | dict[str, Any]) -> bytes:
     """Parse the document description and generate an ODF document as bytes.
 
     This is the recommended front-end when odsgenerator is used as a library.

@@ -1,6 +1,6 @@
 [project]
 name = "odsgenerator"
-version = "1.11.2"
+version = "1.11.3"
 description = "Generate an OpenDocument Format .ods file from json or yaml file"
 authors = [{ name = "Jérôme Dumonteil", email = "jerome.dumonteil@gmail.com" }]
 requires-python = ">=3.9,<4"
@@ -24,10 +24,7 @@ classifiers = [
     "Topic :: Text Processing",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = [
-    "odfdo>=3.7.7",
-    "pyyaml>=5.0"
-]
+dependencies = ["odfdo>=3.7.7", "pyyaml>=5.0"]
 
 [project.urls]
 Homepage = "https://github.com/jdum/odsgenerator"
@@ -37,17 +34,8 @@ Repository = "https://github.com/jdum/odsgenerator"
 odsgenerator = "odsgenerator.cli:main"
 
 [dependency-groups]
-doc = [
-    "sphinx>=7.0",
-    "myst-parser>=2.0.0"
-]
-dev = [
-    "pytest>=8.0",
-    "tox>=4",
-    "ruff>=0.11.0",
-    "isort>=6.0",
-    "coverage>=7.0"
-]
+doc = ["sphinx>=7.0", "myst-parser>=2.0.0"]
+dev = ["pytest>=8.0", "tox>=4", "ruff>=0.11.0", "isort>=6.0", "coverage>=7.0"]
 
 [tool.uv]
 default-groups = ["doc", "dev"]
@@ -102,27 +90,27 @@ select = [
 ]
 ignore = [
     # LineTooLong
-    "E501",
+    #"E501",
     # DoNotAssignLambda
-    "E731",
+    #"E731",
     # Use specific rule codes when ignoring type issues
-    "PGH003",
+    #"PGH003",
     # check for execution of untrusted input
-    "S603",
+    #"S603",
     # Class attribute `open` is shadowing a Python builtin
-    "A003",
+    #"A003",
     # Use `X | Y` in `isinstance` call instead of `(X, Y)`
-    "UP038",
+    #"UP038",
     # Avoid specifying long messages outside the exception class
-    "TRY003",
+    #"TRY003",
     # Use ternary operator
-    "SIM108",
+    #"SIM108",
     # Use of `assert` detected
-    "S101",
+    #"S101",
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/test_*" = ["S101"]
+"tests/test_*" = ["S101", "S603"]
 
 [tool.coverage.report]
 skip_empty = true
