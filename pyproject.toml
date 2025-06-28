@@ -1,9 +1,8 @@
 [project]
 name = "odsgenerator"
-version = "1.11.3"
+version = "1.11.4"
 description = "Generate an OpenDocument Format .ods file from json or yaml file"
 authors = [{ name = "Jérôme Dumonteil", email = "jerome.dumonteil@gmail.com" }]
-requires-python = ">=3.9,<4"
 readme = "README.md"
 license = "MIT"
 keywords = ["openDocument", "ODF", "ods", "json", "spreadsheet", "generator"]
@@ -24,6 +23,7 @@ classifiers = [
     "Topic :: Text Processing",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+requires-python = ">=3.9,<4"
 dependencies = ["odfdo>=3.7.7", "pyyaml>=5.0"]
 
 [project.urls]
@@ -35,7 +35,16 @@ odsgenerator = "odsgenerator.cli:main"
 
 [dependency-groups]
 doc = ["sphinx>=7.0", "myst-parser>=2.0.0"]
-dev = ["pytest>=8.0", "tox>=4", "ruff>=0.11.0", "isort>=6.0", "coverage>=7.0"]
+dev = [
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+    "coverage>=7.9.1",
+    "typing-extensions>=4.14.0",
+    "tox>=4.27.0",
+    "tox-gh-actions>=3.3.0",
+    "ruff>=0.12.1",
+    "isort>=6.0.1",
+]
 
 [tool.uv]
 default-groups = ["doc", "dev"]
@@ -48,14 +57,13 @@ build-backend = "hatchling.build"
 profile = "black"
 
 [tool.ruff]
+target-version = "py313"
 exclude = [".venv"]
 # Same as Black.
 line-length = 88
 indent-width = 4
-target-version = "py313"
-
-[tool.ruff.lint]
-select = [
+fix = false
+lint.select = [
     # flake8-2020
     "YTT",
     # flake8-bandit
@@ -88,7 +96,7 @@ select = [
     # tryceratops
     "TRY",
 ]
-ignore = [
+lint.ignore = [
     # LineTooLong
     #"E501",
     # DoNotAssignLambda
