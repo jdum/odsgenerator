@@ -15,7 +15,7 @@ and returns the ODF content as bytes (ready to be saved as a valid ODF document)
 See also https://github.com/jdum/odsparsator which is doing the reverse
 operation, `.osd` to `.json`.
 
-`odsgenerator` is a `Python3` package, using the [odfdo](https://github.com/jdum/odfdo) library. Current version requires Python >= 3.9, see prior versions for older environments.
+`odsgenerator` is a `Python` package, using the [odfdo](https://github.com/jdum/odfdo) library. Current version requires Python >= 3.9, see prior versions for older environments.
 
 Project:
     https://github.com/jdum/odsgenerator
@@ -31,14 +31,14 @@ License:
 
 Installation from Pypi (recommended):
 
-```python
+```bash
 pip install odsgenerator
 ```
 
-Installation from sources (requiring setuptools):
+Installation from sources:
 
-```python
-pip install .
+```bash
+uv sync
 ```
 
 

@@ -39,15 +39,15 @@ dev = [
     "pytest>=8.4.1",
     "pytest-cov>=6.2.1",
     "coverage>=7.9.1",
+    "mypy>=1.16.1",
+    "mypy-extensions>=1.1.0",
     "typing-extensions>=4.14.0",
     "tox>=4.27.0",
     "tox-gh-actions>=3.3.0",
     "ruff>=0.12.1",
     "isort>=6.0.1",
+    "types-pyyaml>=6.0.12.20250516",
 ]
-
-[tool.uv]
-default-groups = ["doc", "dev"]
 
 [build-system]
 requires = ["hatchling"]
@@ -119,6 +119,19 @@ lint.ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "tests/test_*" = ["S101", "S603"]
+
+[tool.mypy]
+files = ["src/odsgenerator"]
+disallow_untyped_defs = true
+disallow_any_unimported = false
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+[[tool.mypy.overrides]]
+module = "odfdo"
+ignore_missing_imports = true
 
 [tool.coverage.report]
 skip_empty = true

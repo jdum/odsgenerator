@@ -193,7 +193,7 @@ import json
 
 from odfdo import Cell, Document, Element, Row, Table
 
-__version__ = "1.11.3"
+__version__ = "1.11.4"
 
 DEFAULT_STYLES = [
     {
@@ -670,12 +670,12 @@ class ODSGenerator:
         self.doc.body.clear()
         self.tab_counter = 0
         self.defaults = DEFAULTS_DICT
-        self.styles_elements = {}
-        self.used_styles = set()
-        self.spanned_cells = []
+        self.styles_elements: dict[str, Element] = {}
+        self.used_styles: set[str] = set()
+        self.spanned_cells: list[Any] = []
         self.parse(content)
 
-    def save(self, path: str | Path) -> None:
+    def save(self, path: str | Path | io.BytesIO) -> None:
         """Save the resulting ODF document.
 
         Args:
@@ -729,7 +729,7 @@ class ODSGenerator:
         Returns:
             str or None: Name of he style to apply.
         """
-        style_list = opt.get(STYLE, [])
+        style_list: list[str] = opt.get(STYLE, [])
         if not isinstance(style_list, list):
             style_list = [style_list]
         for style_name in style_list:
@@ -768,7 +768,7 @@ class ODSGenerator:
         body, opt = self.split(content, BODY)
         self.defaults.update(opt.get(DEFAULTS, {}))
         self.parse_styles(DEFAULT_STYLES)
-        self.parse_styles(opt.get(STYLES), insert=True)
+        self.parse_styles(opt.get(STYLES), insert=True)  # type: ignore [arg-type]
         for table_content in body:
             self.parse_table(table_content)
 
@@ -842,7 +842,7 @@ class ODSGenerator:
         Returns:
             str: The XML string of the style.
         """
-        return self.doc.insert_style(
+        return self.doc.insert_style(  # type: ignore [no-any-return]
             Element.from_tag(
                 f"""
                     <style:style style:family="table-column">
