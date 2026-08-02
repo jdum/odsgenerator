@@ -157,14 +157,20 @@ A **document** can be:
 - a list of tabs,
 - a dict, with the following keys (only the 'body' key is mandatory):
     - body: a list of tabs,
-    - styles: a list of dict of styles definitions,
+    - styles: a list of dicts of automatic styles definitions,
+    - default_styles: a list of dicts of default styles definitions,
+    - common_styles: a list of dicts of common styles definitions,
     - defaults: a dict, for the defaults styles.
 
-A **style** definition is a dict with 2 items:
+A **style** definition in `styles` and `common_styles` is a dict with 2 items:
 
-- the name of the style (optional, if not present the attribute
-  style:name of the definition is used),
-- an XML definition of the ODF style, see list below.
+- `name`: str, the name of the style (optional for automatic styles),
+- `definition`: str, an XML definition of the ODF style.
+
+A **default style** definition in `default_styles` is a dict with 1 item:
+
+- `definition`: str, an XML definition of the default ODF style.
+
 
 The styles provided for a row or a table can be of family table-row or
 table-cell, they apply to row and below cells. A style defined at a
