@@ -105,13 +105,18 @@ A document can be:
     - a list of tabs,
     - a dict, with the following keys (only the 'body' key is mandatory):
         - body: a list of tabs,
-        - styles: a list of dict of styles definitions,
+        - styles: a list of dicts of automatic styles definitions,
+        - default_styles: a list of dicts of default styles definitions,
+        - common_styles: a list of dicts of common styles definitions,
         - defaults: a dict, for the defaults styles.
 
-A style definition is a dict with 2 items:
-    - name: str, the name of the style (optional, if not present the
-      attribute style:name of the definition is used),
-    - an XML definition of the ODF style, see list below.
+A style definition in `styles` and `common_styles` is a dict with 2 items:
+    - name: str, the name of the style (optional for automatic styles),
+    - definition: str, an XML definition of the ODF style.
+
+A default style definition in `default_styles` is a dict with 1 item:
+    - definition: str, an XML definition of the default ODF style.
+
 
 The styles provided for a row or a table can be of family table-row or
 table-cell, they apply to row and below cells. A style defined at a
@@ -650,6 +655,8 @@ WIDTH = "width"
 SPAN = "span"
 STYLE = "style"
 STYLES = "styles"
+DEFAULT_STYLES_KEY = "default_styles"
+COMMON_STYLES_KEY = "common_styles"
 DEFAULTS = "defaults"
 DEFAULT_TAB_PREFIX = "Tab"
 
@@ -683,37 +690,103 @@ class ODSGenerator:
         """
         self.doc.save(path)
 
-    def parse_styles(self, styles: list[dict[str, str]], insert: bool = False) -> None:
+    def parse_styles(
+        self,
+        styles: list[dict[str, str]] | None,
+        insert: bool = False,
+        automatic: bool = True,
+        default: bool = False,
+    ) -> None:
         """Load available styles, either from default and the input description.
 
         Args:
-            styles (list): List of styles definitions.
-            insert (bool): Force inseerti in document.
+            styles: List of styles definitions.
+            insert: Force insertion in document.
+            automatic: Insert as automatic style if True.
+            default: Insert as default style if True.
         """
         if not styles:
             return
         for style_item in styles:
-            name = style_item.get(NAME)
-            definition = style_item.get(DEFINITION)
-            style = Element.from_tag(definition)
-            if name:
-                style.name = name
-            else:
-                name = style.name
-            self.styles_elements[name] = style
-            if insert:
-                self.insert_style(name)
+            self._parse_single_style(
+                style_item, insert=insert, automatic=automatic, default=default
+            )
 
-    def insert_style(self, name: str, automatic: bool = True) -> None:
-        """Insert the named style into the ODF document."""
-        if name and name not in self.used_styles and name in self.styles_elements:
-            style = self.styles_elements[name]
-            self.doc.insert_style(style, automatic=automatic)
+    def _parse_single_style(
+        self,
+        style_item: dict[str, str],
+        insert: bool = False,
+        automatic: bool = True,
+        default: bool = False,
+    ) -> None:
+        raw_name = style_item.get(NAME)
+        definition = style_item.get(DEFINITION)
+        if not definition:
+            return
+        style = Element.from_tag(definition)
+        name: str | None = str(raw_name) if raw_name else None
+        if name:
+            if not style.get_attribute("style:name") and not style.get_attribute(
+                "draw:name"
+            ):
+                attr = "draw:name" if style.tag.startswith("draw:") else "style:name"
+                style.set_attribute(attr, name)
+        else:
+            inferred_name = (
+                getattr(style, "name", None)
+                or style.get_attribute("draw:name")
+                or style.get_attribute("style:name")
+            )
+            name = str(inferred_name) if inferred_name else None
+        if name:
+            self.styles_elements[name] = style
+        if insert:
+            if default:
+                self.insert_style(style, default=True)
+            else:
+                self.insert_style(name or style, automatic=automatic)
+
+    def insert_style(
+        self,
+        style_or_name: str | Element,
+        automatic: bool = True,
+        default: bool = False,
+    ) -> None:
+        """Insert the named or element style into the ODF document.
+
+        Args:
+            style_or_name: Style name or Element object.
+            automatic: Insert as automatic style if True.
+            default: Insert as default style if True.
+        """
+        if default:
+            if isinstance(style_or_name, Element):
+                self.doc.insert_style(style_or_name, default=True)  # type: ignore [arg-type]
+            elif isinstance(style_or_name, str):
+                style = self.styles_elements.get(style_or_name)
+                if style:
+                    self.doc.insert_style(style, default=True)  # type: ignore [arg-type]
+            return
+
+        if isinstance(style_or_name, Element):
+            raw_name = (
+                getattr(style_or_name, "name", None)
+                or style_or_name.get_attribute("draw:name")
+                or style_or_name.get_attribute("style:name")
+            )
+            name = str(raw_name) if raw_name else None
+            style = style_or_name
+        else:
+            name = style_or_name
+            style = self.styles_elements.get(name)
+
+        if name and name not in self.used_styles and style:
+            self.doc.insert_style(style, automatic=automatic)  # type: ignore [arg-type]
             self.used_styles.add(name)
-            # add style dependacies
+            # add style dependencies
             for key, value in style.attributes.items():
-                if key.endswith("style-name"):
-                    self.insert_style(value)
+                if key.endswith("style-name") and isinstance(value, str):
+                    self.insert_style(value, automatic=automatic)
 
     def guess_style(self, opt: dict[str, Any], family: str, default: str) -> str:
         """Guess which style to apply.
@@ -768,7 +841,9 @@ class ODSGenerator:
         body, opt = self.split(content, BODY)
         self.defaults.update(opt.get(DEFAULTS, {}))
         self.parse_styles(DEFAULT_STYLES)
-        self.parse_styles(opt.get(STYLES), insert=True)  # type: ignore [arg-type]
+        self.parse_styles(opt.get(DEFAULT_STYLES_KEY), insert=True, default=True)
+        self.parse_styles(opt.get(COMMON_STYLES_KEY), insert=True, automatic=False)
+        self.parse_styles(opt.get(STYLES), insert=True, automatic=True)
         for table_content in body:
             self.parse_table(table_content)
 
