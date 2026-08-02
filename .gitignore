@@ -13,6 +13,7 @@ dist/
 *.log
 *egg-info/
 .venv/
+.agents/
 
 # Unit test / coverage reports
 htmlcov/

@@ -1,4 +1,4 @@
-# Copyright 2021-2024 Jérôme Dumonteil
+# Copyright 2021-2026 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
 """CLI interface to odsgenerator."""
