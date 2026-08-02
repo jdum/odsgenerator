@@ -746,6 +746,21 @@ class ODSGenerator:
             else:
                 self.insert_style(name or style, automatic=automatic)
 
+    def _insert_default_style(self, style_or_name: str | Element) -> None:
+        style = (
+            style_or_name
+            if isinstance(style_or_name, Element)
+            else self.styles_elements.get(style_or_name)
+        )
+        if not style:
+            return
+        try:
+            self.doc.insert_style(style, default=True)  # type: ignore [arg-type]
+        except ValueError:
+            office_styles = self.doc.styles.get_element("//office:styles")
+            if office_styles:
+                office_styles.append(style)
+
     def insert_style(
         self,
         style_or_name: str | Element,
@@ -760,12 +775,7 @@ class ODSGenerator:
             default: Insert as default style if True.
         """
         if default:
-            if isinstance(style_or_name, Element):
-                self.doc.insert_style(style_or_name, default=True)  # type: ignore [arg-type]
-            elif isinstance(style_or_name, str):
-                style = self.styles_elements.get(style_or_name)
-                if style:
-                    self.doc.insert_style(style, default=True)  # type: ignore [arg-type]
+            self._insert_default_style(style_or_name)
             return
 
         if isinstance(style_or_name, Element):
@@ -775,18 +785,34 @@ class ODSGenerator:
                 or style_or_name.get_attribute("style:name")
             )
             name = str(raw_name) if raw_name else None
-            style = style_or_name
+            style: Element | None = style_or_name
         else:
             name = style_or_name
             style = self.styles_elements.get(name)
 
+
         if name and name not in self.used_styles and style:
-            self.doc.insert_style(style, automatic=automatic)  # type: ignore [arg-type]
+            self._append_style_element(style, automatic=automatic)
             self.used_styles.add(name)
             # add style dependencies
             for key, value in style.attributes.items():
                 if key.endswith("style-name") and isinstance(value, str):
                     self.insert_style(value, automatic=automatic)
+
+    def _append_style_element(self, style: Element, automatic: bool) -> None:
+        try:
+            self.doc.insert_style(style, automatic=automatic)  # type: ignore [arg-type]
+        except ValueError:
+            path = "//office:automatic-styles" if automatic else "//office:styles"
+            container = (
+                self.doc.content.get_element(path)
+                if automatic
+                else self.doc.styles.get_element(path)
+            )
+            if container:
+                container.append(style)
+
+
 
     def guess_style(self, opt: dict[str, Any], family: str, default: str) -> str:
         """Guess which style to apply.
