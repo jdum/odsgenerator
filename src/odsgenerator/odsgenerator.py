@@ -790,7 +790,6 @@ class ODSGenerator:
             name = style_or_name
             style = self.styles_elements.get(name)
 
-
         if name and name not in self.used_styles and style:
             self._append_style_element(style, automatic=automatic)
             self.used_styles.add(name)
@@ -812,8 +811,6 @@ class ODSGenerator:
             if container:
                 container.append(style)
 
-
-
     def guess_style(self, opt: dict[str, Any], family: str, default: str) -> str:
         """Guess which style to apply.
 
@@ -834,11 +831,11 @@ class ODSGenerator:
         for style_name in style_list:
             if style_name:
                 style = self.styles_elements.get(style_name)
-                if style and style.family == family:
+                if style and getattr(style, "family", None) == family:
                     return style_name
         if default:
             style = self.styles_elements.get(default)
-            if style and style.family == family:
+            if style and getattr(style, "family", None) == family:
                 return default
         return ""
 
@@ -944,14 +941,12 @@ class ODSGenerator:
             str: The XML string of the style.
         """
         return self.doc.insert_style(  # type: ignore [no-any-return]
-            Element.from_tag(
-                f"""
-                    <style:style style:family="table-column">
-                    <style:table-column-properties fo:break-before="auto"
-                    style:column-width="{width}"/>
-                    </style:style>
-                """
-            ),
+            f"""
+                <style:style style:family="table-column">
+                <style:table-column-properties fo:break-before="auto"
+                style:column-width="{width}"/>
+                </style:style>
+            """,
             automatic=True,
         )
 
@@ -987,6 +982,8 @@ class ODSGenerator:
         colspan = max(1, int(opt.get(COLSPAN, 1)))
         rowspan = max(1, int(opt.get(ROWSPAN, 1)))
         if colspan < 2 and rowspan < 2:
+            return
+        if cell.x is None or cell.y is None:
             return
         self.spanned_cells.append(
             [cell.x, cell.y, cell.x + colspan - 1, cell.y + rowspan - 1]
