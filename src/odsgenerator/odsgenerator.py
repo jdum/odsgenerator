@@ -198,7 +198,7 @@ import json
 
 from odfdo import Cell, Document, Element, Row, Table
 
-__version__ = "1.15.0"
+__version__ = "1.16.0"
 
 DEFAULT_STYLES = [
     {

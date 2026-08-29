@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>odsgenerator 1.15.0 documentation</title>
+    <title>odsgenerator 1.16.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
-    <script src="_static/documentation_options.js?v=d766b07d"></script>
+    <script src="_static/documentation_options.js?v=50eb4650"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -79,8 +79,8 @@ and look at examples in the tests folder.</p>
 <h2>Usage from python code<a class="headerlink" href="#usage-from-python-code" title="Link to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">odsgenerator</span><span class="w"> </span><span class="kn">import</span> <span class="n">odsgenerator</span>
 
-<span class="n">content</span> <span class="o">=</span> <span class="n">odsgenerator</span><span class="o">.</span><span class="n">ods_bytes</span><span class="p">([[[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]]])</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sample.ods&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">odsgenerator</span><span class="o">.</span><span class="n">ods_bytes</span><span class="p">([[[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]]])</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"sample.ods"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -92,19 +92,19 @@ and look at examples in the tests folder.</p>
 <span class="n">content</span> <span class="o">=</span> <span class="n">odsgenerator</span><span class="o">.</span><span class="n">ods_bytes</span><span class="p">(</span>
     <span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;first tab&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;cell_decimal2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;table&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"first tab"</span><span class="p">,</span>
+            <span class="s2">"style"</span><span class="p">:</span> <span class="s2">"cell_decimal2"</span><span class="p">,</span>
+            <span class="s2">"table"</span><span class="p">:</span> <span class="p">[</span>
                 <span class="p">{</span>
-                    <span class="s2">&quot;row&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
-                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;bold_center_bg_gray_grid_06pt&quot;</span><span class="p">,</span>
+                    <span class="s2">"row"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">],</span>
+                    <span class="s2">"style"</span><span class="p">:</span> <span class="s2">"bold_center_bg_gray_grid_06pt"</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
             <span class="p">],</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sample2.ods&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"sample2.ods"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
 </div>

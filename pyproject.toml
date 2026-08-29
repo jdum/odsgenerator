@@ -1,6 +1,6 @@
 [project]
 name = "odsgenerator"
-version = "1.15.0"
+version = "1.16.0"
 description = "Generate an OpenDocument Format .ods file from json or yaml file"
 license = "MIT"
 readme = "README.md"
@@ -36,16 +36,15 @@ odsgenerator = "odsgenerator.cli:main"
 [dependency-groups]
 doc = ["sphinx>=7.0", "myst-parser>=4.0.1", "roman-numerals-py!=4.1.0"]
 dev = [
-    "pytest>=8.4.0",
+    "pytest>=9.1.1",
     "pytest-cov>=6.2.1",
-    "coverage>=7.10.7",
-    "mypy>=1.18.2",
+    "coverage>=7.16.0",
+    "mypy>=2.3.1",
     "mypy-extensions>=1.1.0",
     "typing-extensions>=4.15.0",
-    "tox>=4.31.0",
+    "tox>=4.61.1",
     "tox-gh-actions>=3.3.0",
-    "ruff>=0.14.0",
-    "isort>=7.0.0",
+    "ruff>=0.16.5",
     "types-pyyaml>=6.0.12.20250915",
 ]
 
