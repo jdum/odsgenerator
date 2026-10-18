@@ -198,7 +198,7 @@ import json
 
 from odfdo import Cell, Document, Element, Row, Table
 
-__version__ = "1.16.0"
+__version__ = "1.17.0"
 
 DEFAULT_STYLES = [
     {
@@ -755,7 +755,7 @@ class ODSGenerator:
         if not style:
             return
         try:
-            self.doc.insert_style(style, default=True)  # type: ignore [arg-type]
+            self.doc.insert_style(style, default=True)  # ty: ignore[invalid-argument-type]
         except ValueError:
             office_styles = self.doc.styles.get_element("//office:styles")
             if office_styles:
@@ -800,7 +800,7 @@ class ODSGenerator:
 
     def _append_style_element(self, style: Element, automatic: bool) -> None:
         try:
-            self.doc.insert_style(style, automatic=automatic)  # type: ignore [arg-type]
+            self.doc.insert_style(style, automatic=automatic)  # ty: ignore[invalid-argument-type]
         except ValueError:
             path = "//office:automatic-styles" if automatic else "//office:styles"
             container = (

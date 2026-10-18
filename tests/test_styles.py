@@ -50,7 +50,7 @@ def test_new_style_keys_default_and_common():
     defaults = office_styles.get_elements("style:default-style")
     assert len(defaults) >= 1
     # Check common style CustomCommon is in office:styles
-    assert gen.doc.get_style("table-cell", "CustomCommon") is not None
+    assert office_styles.get_style("table-cell", "CustomCommon") is not None
 
 
 def test_backward_compatibility_without_new_keys():
