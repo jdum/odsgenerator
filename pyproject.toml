@@ -1,6 +1,6 @@
 [project]
 name = "odsgenerator"
-version = "1.17.0"
+version = "1.18.0"
 description = "Generate an OpenDocument Format .ods file from json or yaml file"
 license = "MIT"
 license-files = ["LICENSE.txt"]
