@@ -23,7 +23,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 requires-python = ">=3.10, <4"
-dependencies = ["odfdo>=3.19.0", "pyyaml>=6.0.3"]
+dependencies = ["odfdo>=3.27.3", "pyyaml>=6.0.3"]
 
 [project.urls]
 Homepage = "https://github.com/jdum/odsgenerator"
