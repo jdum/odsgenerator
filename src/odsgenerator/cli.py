@@ -29,9 +29,11 @@ def main() -> None:  # pragma: no cover
     """Read parameters from STDIN and apply the required command.
 
     Usage:
-       odsgenerator [-h] [--version] input_file output_file
+       odsgenerator [-h] [--version] [-l LANGUAGE] input_file output_file
 
     Arguments:
+        -l, --lang: Force document language (e.g. 'en-US', 'fr-FR').
+
         input_file: Input file containing data in json or yaml format.
 
         output_file: Output file, .ods file generated from input.
@@ -50,13 +52,21 @@ def main() -> None:  # pragma: no cover
         "--version", action="version", version="%(prog)s " + __version__
     )
     parser.add_argument(
+        "-l",
+        "--lang",
+        "--language",
+        dest="language",
+        default=None,
+        help="force document language (e.g. 'en-US', 'fr-FR')",
+    )
+    parser.add_argument(
         "input_file", help="input file containing data in json or yaml format"
     )
     parser.add_argument(
         "output_file", help="output file, .ods file generated from input"
     )
     args = parser.parse_args()
-    file_to_ods(args.input_file, args.output_file)
+    file_to_ods(args.input_file, args.output_file, language=args.language)
 
 
 if __name__ == "__main__":

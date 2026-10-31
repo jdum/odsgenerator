@@ -19,11 +19,13 @@ operation, ods => json.
 Usage
 -----
 
-   odsgenerator [-h] [--version] input_file output_file
+   odsgenerator [-h] [--version] [-l LANGUAGE] input_file output_file
 
 
 Arguments
 ---------
+
+-l, --lang: force document language (e.g. "en-US", "fr-FR")
 
 input_file: input file containing data in json or yaml format
 
@@ -108,7 +110,8 @@ A document can be:
         - styles: a list of dicts of automatic styles definitions,
         - default_styles: a list of dicts of default styles definitions,
         - common_styles: a list of dicts of common styles definitions,
-        - defaults: a dict, for the defaults styles.
+        - defaults: a dict, for the defaults styles,
+        - language: str, optional language code (e.g. "en-US", "fr-FR").
 
 A style definition in `styles` and `common_styles` is a dict with 2 items:
     - name: str, the name of the style (optional for automatic styles),
@@ -659,6 +662,7 @@ DEFAULT_STYLES_KEY = "default_styles"
 COMMON_STYLES_KEY = "common_styles"
 DEFAULTS = "defaults"
 DEFAULT_TAB_PREFIX = "Tab"
+LANGUAGE = "language"
 
 
 class ODSGenerator:
@@ -669,10 +673,15 @@ class ODSGenerator:
     content_to_ods().
 
     Args:
-        content (list or dict): Description of tables.
+        content: Description of tables.
+        language: Optional language code to force or set (e.g. "en-US").
     """
 
-    def __init__(self, content: list[Any] | dict[str, Any]) -> None:
+    def __init__(
+        self,
+        content: list[Any] | dict[str, Any],
+        language: str | None = None,
+    ) -> None:
         self.doc = Document("spreadsheet")
         self.doc.body.clear()
         self.tab_counter = 0
@@ -680,6 +689,7 @@ class ODSGenerator:
         self.styles_elements: dict[str, Element] = {}
         self.used_styles: set[str] = set()
         self.spanned_cells: list[Any] = []
+        self.language = language
         self.parse(content)
 
     def save(self, path: str | Path | io.BytesIO) -> None:
@@ -863,6 +873,9 @@ class ODSGenerator:
         """Parse the top level of the input description."""
         body, opt = self.split(content, BODY)
         self.defaults.update(opt.get(DEFAULTS, {}))
+        language = self.language if self.language is not None else opt.get(LANGUAGE)
+        if language:
+            self.doc.language = str(language)
         self.parse_styles(DEFAULT_STYLES)
         self.parse_styles(opt.get(DEFAULT_STYLES_KEY), insert=True, default=True)
         self.parse_styles(opt.get(COMMON_STYLES_KEY), insert=True, automatic=False)
@@ -991,26 +1004,34 @@ class ODSGenerator:
 
 
 def content_to_ods(
-    content: list[Any] | dict[str, Any], output_path: str | Path
+    content: list[Any] | dict[str, Any],
+    output_path: str | Path,
+    language: str | None = None,
 ) -> None:
     """Parse document description and save resulting ODF to file.
 
     Args:
-        content (list or dict): Input description of tables.
-        output_path (str or Path or BytesIO): Path of the ODF output file.
+        content: Input description of tables.
+        output_path: Path of the ODF output file.
+        language: Optional language code to force or set (e.g. "en-US").
     """
-    document = ODSGenerator(content)
+    document = ODSGenerator(content, language=language)
     document.save(output_path)
 
 
-def file_to_ods(input_path: str, output_path: str | Path) -> None:
+def file_to_ods(
+    input_path: str | Path,
+    output_path: str | Path,
+    language: str | None = None,
+) -> None:
     """Parse the input file and save resulting ODF to file.
 
     The input file can be JSON or other YAML format.
 
     Args:
-        input_path (str or Path): Path of the file with desription to parse.
-        output_path (str or Path or BytesIO): Path of the ODF output file.
+        input_path: Path of the file with description to parse.
+        output_path: Path of the ODF output file.
+        language: Optional language code to force or set (e.g. "en-US").
     """
     if "yaml" in sys.modules:
         with open(input_path, encoding="utf8") as file:
@@ -1018,10 +1039,13 @@ def file_to_ods(input_path: str, output_path: str | Path) -> None:
     else:  # fall back to json
         with open(input_path, encoding="utf8") as file:
             content = json.load(file)
-    content_to_ods(content, output_path)
+    content_to_ods(content, output_path, language=language)
 
 
-def ods_bytes(content: list[Any] | dict[str, Any]) -> bytes:
+def ods_bytes(
+    content: list[Any] | dict[str, Any],
+    language: str | None = None,
+) -> bytes:
     """Parse the document description and generate an ODF document as bytes.
 
     This is the recommended front-end when odsgenerator is used as a library.
@@ -1035,12 +1059,13 @@ def ods_bytes(content: list[Any] | dict[str, Any]) -> bytes:
     7266
 
     Args:
-        content (list or dict): Input description of tables.
+        content: Input description of tables.
+        language: Optional language code to force or set (e.g. "en-US").
 
     Returns:
         bytes: Zipped OpenDocument format.
     """
     with io.BytesIO() as iobytes:
-        document = ODSGenerator(content)
+        document = ODSGenerator(content, language=language)
         document.save(iobytes)
         return iobytes.getvalue()
