@@ -39,13 +39,13 @@ doc = [
     "roman-numerals-py!=4.1.0"
 ]
 dev = [
-    "pytest>=9.1.1",
+    "pytest>=9.2.0",
     "pytest-cov>=7.0.0",
     "coverage>=7.16.1",
     "typing-extensions>=4.15.0",
     "tox>=4.63.0",
-    "ruff>=0.17.0",
-    "ty>=0.0.89",
+    "ruff>=0.17.3",
+    "ty>=0.0.95",
     "types-pyyaml>=6.0.12.20250915",
 ]
 
