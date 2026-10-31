@@ -1,3 +1,4 @@
+import json
 import re
 import subprocess
 from pathlib import Path
@@ -77,3 +78,65 @@ def test_generate(tmp_path):
     assert "spreadsheet" in document.container.mimetype
     tables = document.body.get_tables()
     assert len(tables) == 2
+
+
+def test_generate_lang_short(tmp_path):
+    dest = tmp_path / "document.ods"
+    dest.unlink(missing_ok=True)
+    command = ["odsgenerator", "-l", "en-US", str(FILE2), str(dest)]
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    document = Document(dest)
+    assert document.language == "en-US"
+    assert document.meta.language == "en-US"
+
+
+def test_generate_lang_long(tmp_path):
+    dest = tmp_path / "document.ods"
+    dest.unlink(missing_ok=True)
+    command = ["odsgenerator", "--lang", "en-GB", str(FILE2), str(dest)]
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    document = Document(dest)
+    assert document.language == "en-GB"
+    assert document.meta.language == "en-GB"
+
+
+def test_generate_language_flag(tmp_path):
+    dest = tmp_path / "document.ods"
+    dest.unlink(missing_ok=True)
+    command = ["odsgenerator", "--language", "es-ES", str(FILE2), str(dest)]
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    document = Document(dest)
+    assert document.language == "es-ES"
+    assert document.meta.language == "es-ES"
+
+
+def test_generate_lang_override(tmp_path):
+    json_path = tmp_path / "doc.json"
+    data = {
+        "language": "fr-FR",
+        "body": [[["Hello"]]],
+    }
+    json_path.write_text(json.dumps(data), encoding="utf8")
+    dest = tmp_path / "document.ods"
+    dest.unlink(missing_ok=True)
+    command = ["odsgenerator", "-l", "de-DE", str(json_path), str(dest)]
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    document = Document(dest)
+    assert document.language == "de-DE"
+    assert document.meta.language == "de-DE"
