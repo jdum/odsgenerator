@@ -45,11 +45,12 @@ uv sync
 ## CLI usage
 
 ```
-odsgenerator [-h] [--version] input_file output_file
+odsgenerator [-h] [--version] [-l LANGUAGE] input_file output_file
 ```
 
 ### arguments
 
+``-l, --lang``: force document language (e.g. `en-US`, `fr-FR`)
 
 ``input_file``: input file containing data in JSON or YAML format
 
@@ -160,7 +161,8 @@ A **document** can be:
     - styles: a list of dicts of automatic styles definitions,
     - default_styles: a list of dicts of default styles definitions,
     - common_styles: a list of dicts of common styles definitions,
-    - defaults: a dict, for the defaults styles.
+    - defaults: a dict, for the defaults styles,
+    - language: str, optional language code (e.g. "en-US", "fr-FR").
 
 A **style** definition in `styles` and `common_styles` is a dict with 2 items:
 

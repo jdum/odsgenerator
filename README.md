@@ -45,11 +45,12 @@ uv sync
 ## CLI usage
 
 ```
-odsgenerator [-h] [--version] input_file output_file
+odsgenerator [-h] [--version] [-l LANGUAGE] input_file output_file
 ```
 
 ### arguments
 
+`-l`, `--lang`: force document language (e.g. `en-US`, `fr-FR`)
 
 `input_file`: input file containing data in JSON or YAML format
 
@@ -104,7 +105,7 @@ The `.ods` file loaded in a spreadsheet, with gray background on first line:
 
 ## Principle
 
--  A document is a list or dict containing tabs,
+-  A document is a list or dict containing tabs. If a dict is provided, optional keys include `language` (e.g. `"en-US"`), `styles`, `default_styles`, `common_styles`, `defaults`, and `body`.
 -  a tab is a list or dict containing rows,
 -  a row is a list or dict containing cells.
 

@@ -64,11 +64,12 @@ MIT</p>
 </section>
 <section id="cli-usage">
 <h2>CLI usage<a class="headerlink" href="#cli-usage" title="Link to this heading">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">odsgenerator</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="n">input_file</span> <span class="n">output_file</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">odsgenerator</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">l</span> <span class="n">LANGUAGE</span><span class="p">]</span> <span class="n">input_file</span> <span class="n">output_file</span>
 </pre></div>
 </div>
 <section id="arguments">
 <h3>arguments<a class="headerlink" href="#arguments" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">-l,</span> <span class="pre">--lang</span></code>: force document language (e.g. <code class="docutils literal notranslate"><span class="pre">en-US</span></code>, <code class="docutils literal notranslate"><span class="pre">fr-FR</span></code>)</p>
 <p><code class="docutils literal notranslate"><span class="pre">input_file</span></code>: input file containing data in JSON or YAML format</p>
 <p><code class="docutils literal notranslate"><span class="pre">output_file</span></code>: output file, <code class="docutils literal notranslate"><span class="pre">.ods</span></code> file generated from the input</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">odsgenerator</span> <span class="pre">--help</span></code> for more details about input file parameters
@@ -179,7 +180,8 @@ coordiante system: “A1:B3” or [0, 0, 2, 1].</p></li>
 <li><p>styles: a list of dicts of automatic styles definitions,</p></li>
 <li><p>default_styles: a list of dicts of default styles definitions,</p></li>
 <li><p>common_styles: a list of dicts of common styles definitions,</p></li>
-<li><p>defaults: a dict, for the defaults styles.</p></li>
+<li><p>defaults: a dict, for the defaults styles,</p></li>
+<li><p>language: str, optional language code (e.g. “en-US”, “fr-FR”).</p></li>
 </ul>
 </li>
 </ul>
