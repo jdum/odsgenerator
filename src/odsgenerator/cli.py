@@ -11,7 +11,7 @@ import odfdo
 from odsgenerator.odsgenerator import __doc__ as og_doc
 from odsgenerator.odsgenerator import __version__, file_to_ods
 
-ODFDO_REQUIREMENT = (3, 7, 7)
+ODFDO_REQUIREMENT = (3, 19, 0)
 
 
 def check_odfdo_version() -> bool:
